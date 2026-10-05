@@ -1,0 +1,26 @@
+# Food Tracking Perú
+
+> Consultoría de inocuidad alimentaria en Lima, con atención en todo el Perú: implementación de HACCP, BPM, ISO 22000 y BRCGS, transformación digital de registros de calidad y diseño 3D de plantas alimentarias antes de construir. Dirigida por el Ing. Willam Pari Hilasaca (CIP N.° 149723).
+
+## Servicios
+- Sistemas de gestión integral: implementación y certificación de HACCP, BPM/PGH, ISO 22000, BRCGS, IFS, FSSC 22000 y SQF. https://willamp5.github.io/foodtracking-web/servicios/gestion-integral.html
+- Regulación y compliance: registros sanitarios, habilitaciones y autorizaciones ante DIGESA, SENASA y MINSA. https://willamp5.github.io/foodtracking-web/servicios/regulacion.html
+- Transformación digital: migración de registros BPM y HACCP del papel a la nube, con acceso desde cualquier dispositivo. https://willamp5.github.io/foodtracking-web/servicios/transformacion-digital.html
+- Auditoría y capacitación: diagnóstico GAP y programas de formación in-company en BPM y HACCP. https://willamp5.github.io/foodtracking-web/servicios/auditoria.html
+- Ingeniería inmersiva 3D: diseño 3D de plantas alimentarias HACCP-ready con SketchUp Pro, y expedientes para la habilitación sanitaria. https://willamp5.github.io/foodtracking-web/servicios/ingenieria-3d.html
+
+## Dónde trabajamos
+Lima, Callao y provincias de todo el Perú. Para proyectos fuera de Lima se coordinan visitas técnicas y reuniones virtuales.
+
+## Primer paso
+Diagnóstico inicial gratuito de 30 a 45 minutos, por videollamada o presencial en Lima. El costo de cada proyecto se define después de ese diagnóstico.
+
+## Marco normativo que aplicamos
+DL 1062 (Ley de Inocuidad de los Alimentos), DS 007-98-SA, RM 495-2008 (BPM) y NTS 071 MINSA/DIGESA, además de los estándares GFSI para empresas exportadoras.
+
+## Contacto
+- WhatsApp: +51 952 255 734
+- Correo: wparih@gmail.com
+- Facebook: https://www.facebook.com/foodtrackingperu
+- Instagram: https://instagram.com/foodtrackingperu
+- Sitio web: https://willamp5.github.io/foodtracking-web/
