@@ -24,7 +24,7 @@
     return tex(1024, 512, function (g, w, h) {
       var img = g.createImageData(w, h), d = img.data, n = cols.length;
       for (var y = 0; y < h; y++) for (var x = 0; x < w; x++) {
-        var u = x / w, vv = y / h + 0.04 * Math.sin(u * Math.PI * 4) + 0.022 * Math.sin(u * Math.PI * 6 + 1);
+        var u = x / w, vv = y / h + 0.012 * Math.sin(u * Math.PI * 4);
         var t = Math.max(0, Math.min(0.9999, vv)) * n, k = Math.floor(t), fr = t - k, c = cols[k], i = (y * w + x) * 4, lift = fr < 0.045 && k > 0 ? 0.55 : 0;
         d[i] = c[0] + (255 - c[0]) * lift; d[i + 1] = c[1] + (255 - c[1]) * lift; d[i + 2] = c[2] + (255 - c[2]) * lift; d[i + 3] = 255;
       }
