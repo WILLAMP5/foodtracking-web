@@ -18,20 +18,23 @@
     });
   }
 
-  /* textura de la esfera con la "F": el emblema se repite en dos lados */
-  function texF(img) {
+  /* textura del emblema: bandas azules continuas alrededor de toda la esfera + meridianos que giran */
+  function texF() {
     return tex(1024, 512, function (g, w, h) {
-      var grad = g.createLinearGradient(0, 0, 0, h); grad.addColorStop(0, '#5fb8f0'); grad.addColorStop(0.5, '#1a74c4'); grad.addColorStop(1, '#0a2a5c');
+      var grad = g.createLinearGradient(0, 0, 0, h);
+      [[0, '#8ad3f7'], [0.22, '#3fb0ee'], [0.42, '#1f86d6'], [0.62, '#1356a8'], [0.82, '#0b3779'], [1, '#07204a']].forEach(function (c) { grad.addColorStop(c[0], c[1]); });
       g.fillStyle = grad; g.fillRect(0, 0, w, h);
-      var sw = img.naturalWidth, sh = img.naturalHeight, half = Math.min(sw, sh) * 0.26, cx = sw * 0.5, cy = sh * 0.5;
-      [0.25, 0.75].forEach(function (u) { g.drawImage(img, cx - half, cy - half, half * 2, half * 2, w * u - 170, h / 2 - 170, 340, 340); });
+      g.strokeStyle = 'rgba(255,255,255,.22)'; g.lineWidth = 2;
+      for (var j = 1; j < 8; j++) { g.beginPath(); g.moveTo(0, j * h / 8); g.lineTo(w, j * h / 8); g.stroke(); }
+      g.strokeStyle = 'rgba(255,255,255,.34)'; g.lineWidth = 3;
+      for (var i = 0; i < 12; i++) { g.beginPath(); g.moveTo(i * w / 12, 0); g.lineTo(i * w / 12, h); g.stroke(); }
     });
   }
 
   function globo(canvas, texture, opts) {
     var S = canvas.width, ctx = canvas.getContext('2d'), tw = texture.width, th = texture.height;
     var td = texture.getContext('2d').getImageData(0, 0, tw, th).data, out = ctx.createImageData(S, S), od = out.data;
-    var tilt = (opts && opts.tilt) || 0.35, ct = Math.cos(tilt), st = Math.sin(tilt), speed = (opts && opts.speed) || 0.5, rot = 0, last = 0, vis = true, R = S / 2 - 1;
+    var roll = (opts && opts.roll) || 0, cr = Math.cos(roll), sr = Math.sin(roll), over = opts && opts.over, tilt = (opts && opts.tilt) || 0.35, ct = Math.cos(tilt), st = Math.sin(tilt), speed = (opts && opts.speed) || 0.5, rot = 0, last = 0, vis = true, R = S / 2 - 1;
     var L = [-0.45, -0.5, 0.74];
     function frame(ts) {
       if (!vis || document.hidden) { last = 0; return; }
@@ -40,14 +43,15 @@
         var nx = (x + 0.5 - S / 2) / R, ny = -(y + 0.5 - S / 2) / R, d2 = nx * nx + ny * ny, i = (y * S + x) * 4;
         if (d2 >= 1) { od[i + 3] = 0; continue; }
         var nz = Math.sqrt(1 - d2);
-        var y2 = ny * ct - nz * st, z2 = ny * st + nz * ct;
-        var lon = Math.atan2(nx, z2) + rot, u = lon / (Math.PI * 2); u -= Math.floor(u);
+        var rx = nx * cr + ny * sr, ry = -nx * sr + ny * cr;
+        var y2 = ry * ct - nz * st, z2 = ry * st + nz * ct;
+        var lon = Math.atan2(rx, z2) + rot, u = lon / (Math.PI * 2); u -= Math.floor(u);
         var v = 0.5 - Math.asin(Math.max(-1, Math.min(1, y2))) / Math.PI;
         var px = Math.min(tw - 1, (u * tw) | 0), py = Math.min(th - 1, Math.max(0, (v * th) | 0)), ti = (py * tw + px) * 4;
         var diff = nx * L[0] + ny * L[1] + nz * L[2], sh = 0.62 + 0.45 * Math.max(0, diff), spec = Math.pow(Math.max(0, diff), 24) * 70, edge = Math.min(1, (1 - Math.sqrt(d2)) * R / 1.4);
         od[i] = Math.min(255, td[ti] * sh + spec); od[i + 1] = Math.min(255, td[ti + 1] * sh + spec); od[i + 2] = Math.min(255, td[ti + 2] * sh + spec); od[i + 3] = 255 * edge;
       }
-      ctx.putImageData(out, 0, 0); requestAnimationFrame(frame);
+      ctx.putImageData(out, 0, 0); if (over) over(ctx, S); requestAnimationFrame(frame);
     }
     new IntersectionObserver(function (e) { var was = vis; vis = e[0].isIntersecting; if (vis && !was) requestAnimationFrame(frame); }).observe(canvas);
     document.addEventListener('visibilitychange', function () { if (!document.hidden && vis) requestAnimationFrame(frame); });
@@ -65,16 +69,17 @@
     tx.src = logo.getAttribute('src').replace('logo-minimalista.jpg', 'logo-texto.png'); tx.height = 34; tx.width = 121;
     tx.onload = function () {
       var br = logo.parentNode; br.classList.add('has-globo'); br.insertBefore(cv, logo); br.insertBefore(tx, logo); logo.style.display = 'none';
-      globo(cv, texLogo(), { tilt: 0.38, speed: 0.55 });
+      globo(cv, texLogo(), { tilt: -0.5, roll: -0.25, speed: 0.55 });
     };
   }
 
-  /* pie de página: esfera con la "F" girando */
+  /* pie de página: esfera con meridianos que giran y la "F" fija encima */
   var f = document.querySelector('.foot-wm-icon');
   if (f) {
     var im = new Image(); im.onload = function () {
       var c2 = document.createElement('canvas'); c2.className = f.className + ' globo'; c2.width = c2.height = size(56); c2.style.width = c2.style.height = '56px'; c2.setAttribute('aria-hidden', 'true');
-      f.parentNode.replaceChild(c2, f); globo(c2, texF(im), { tilt: 0.25, speed: 0.9 });
-    }; im.src = f.src;
+      f.parentNode.replaceChild(c2, f);
+      globo(c2, texF(), { tilt: 0.2, speed: 0.9, over: function (ctx, S) { var w = S * 0.38, h = w * im.naturalHeight / im.naturalWidth; ctx.drawImage(im, (S - w) / 2, (S - h) / 2, w, h); } });
+    }; im.src = f.src.replace('logo-f.png', 'logo-f-letra.png');
   }
 })();
