@@ -1,4 +1,4 @@
-/* Movimiento: titular animado, reveal por scroll, tilt 3D en tarjetas, barra de progreso, carga diferida del hero 3D. */
+/* Movimiento: titular animado, reveal por scroll, tilt 3D en tarjetas, barra de progreso, . */
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var root = document.documentElement;
@@ -49,10 +49,4 @@
     });
   }
 
-  /* hero 3D: solo si hay WebGL, tras la carga y sin bloquear nada */
-  function webgl() { try { var c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; } }
-  if (document.querySelector('.hero-art') && webgl()) {
-    var go = function () { import('./hero3d.js').catch(function () {}); };
-    if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 2000 }); else setTimeout(go, 800);
-  }
 })();
