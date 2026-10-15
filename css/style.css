@@ -398,3 +398,13 @@ footer{background:var(--navy-deep);color:#cdd9ec;padding:52px 0 40px}
 @media(prefers-reduced-motion:reduce){
   .scroll-progress{transition:none}
 }
+
+/* ===== Logos que giran (3D) ===== */
+.fx .brand .logo,.fx .foot-wm-icon{transform-style:preserve-3d;backface-visibility:visible;will-change:transform}
+.fx .brand .logo{animation:logoSpin 1.4s cubic-bezier(.3,.7,.2,1) .3s 1 both}
+.fx .brand:hover .logo{animation:logoSpin 1s cubic-bezier(.3,.7,.2,1) 1 both}
+.fx .foot-wm-icon{animation:logoTurn 9s linear infinite}
+@keyframes logoSpin{from{transform:perspective(500px) rotateY(-360deg)}to{transform:perspective(500px) rotateY(0)}}
+@keyframes logoTurn{from{transform:perspective(500px) rotateY(0)}to{transform:perspective(500px) rotateY(360deg)}}
+.fx .hero-art img{will-change:transform}
+.fx .btn{transition:transform .2s ease-out,background-color .15s,color .15s,box-shadow .2s}

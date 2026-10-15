@@ -49,4 +49,20 @@
     });
   }
 
+
+  /* el logo del encabezado vuelve a girar al pasar el ratón (reinicia la animación) */
+  var br=document.querySelector('.brand .logo');
+  if(br){br.parentNode.addEventListener('mouseenter',function(){br.style.animation='none';void br.offsetWidth;br.style.animation='';});}
+
+  /* parallax suave de la foto del hero al hacer scroll */
+  var ha=document.querySelector('.hero-art img');
+  if(ha){var pt=false;addEventListener('scroll',function(){if(!pt){pt=true;requestAnimationFrame(function(){pt=false;if(scrollY<900)ha.style.transform='translateY('+(scrollY*0.08)+'px) scale(1.06)';});}},{passive:true});ha.style.transform='scale(1.06)';}
+
+  /* botones magnéticos: se acercan un poco al puntero (solo ratón) */
+  if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+    document.querySelectorAll('.hero-cta .btn,.nav-cta').forEach(function(b){
+      b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*0.15)+'px,'+((e.clientY-r.top-r.height/2)*0.25)+'px)';});
+      b.addEventListener('pointerleave',function(){b.style.transform='';});
+    });
+  }
 })();
