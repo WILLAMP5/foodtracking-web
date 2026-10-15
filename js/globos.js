@@ -18,16 +18,17 @@
     });
   }
 
-  /* textura del emblema: bandas azules continuas alrededor de toda la esfera + meridianos que giran */
+  /* textura del emblema: franjas de azul en degradé con borde ondulado, continuas alrededor de toda la esfera */
   function texF() {
+    var cols = [[138, 214, 248], [63, 176, 238], [31, 134, 214], [19, 86, 168], [11, 55, 121], [7, 32, 74]];
     return tex(1024, 512, function (g, w, h) {
-      var grad = g.createLinearGradient(0, 0, 0, h);
-      [[0, '#8ad3f7'], [0.22, '#3fb0ee'], [0.42, '#1f86d6'], [0.62, '#1356a8'], [0.82, '#0b3779'], [1, '#07204a']].forEach(function (c) { grad.addColorStop(c[0], c[1]); });
-      g.fillStyle = grad; g.fillRect(0, 0, w, h);
-      g.strokeStyle = 'rgba(255,255,255,.22)'; g.lineWidth = 2;
-      for (var j = 1; j < 8; j++) { g.beginPath(); g.moveTo(0, j * h / 8); g.lineTo(w, j * h / 8); g.stroke(); }
-      g.strokeStyle = 'rgba(255,255,255,.34)'; g.lineWidth = 3;
-      for (var i = 0; i < 12; i++) { g.beginPath(); g.moveTo(i * w / 12, 0); g.lineTo(i * w / 12, h); g.stroke(); }
+      var img = g.createImageData(w, h), d = img.data, n = cols.length;
+      for (var y = 0; y < h; y++) for (var x = 0; x < w; x++) {
+        var u = x / w, vv = y / h + 0.04 * Math.sin(u * Math.PI * 4) + 0.022 * Math.sin(u * Math.PI * 6 + 1);
+        var t = Math.max(0, Math.min(0.9999, vv)) * n, k = Math.floor(t), fr = t - k, c = cols[k], i = (y * w + x) * 4, lift = fr < 0.045 && k > 0 ? 0.55 : 0;
+        d[i] = c[0] + (255 - c[0]) * lift; d[i + 1] = c[1] + (255 - c[1]) * lift; d[i + 2] = c[2] + (255 - c[2]) * lift; d[i + 3] = 255;
+      }
+      g.putImageData(img, 0, 0);
     });
   }
 
@@ -77,9 +78,9 @@
   var f = document.querySelector('.foot-wm-icon');
   if (f) {
     var im = new Image(); im.onload = function () {
-      var c2 = document.createElement('canvas'); c2.className = f.className + ' globo'; c2.width = c2.height = size(56); c2.style.width = c2.style.height = '56px'; c2.setAttribute('aria-hidden', 'true');
+      var c2 = document.createElement('canvas'); c2.className = f.className + ' globo'; c2.width = c2.height = size(50); c2.style.width = c2.style.height = '50px'; c2.setAttribute('aria-hidden', 'true');
       f.parentNode.replaceChild(c2, f);
-      globo(c2, texF(), { tilt: 0.2, speed: 0.9, over: function (ctx, S) { var w = S * 0.38, h = w * im.naturalHeight / im.naturalWidth; ctx.drawImage(im, (S - w) / 2, (S - h) / 2, w, h); } });
+      globo(c2, texF(), { tilt: -0.28, speed: 0.9, over: function (ctx, S) { var w = S * 0.4, h = w * im.naturalHeight / im.naturalWidth; ctx.drawImage(im, (S - w) / 2, (S - h) / 2, w, h); } });
     }; im.src = f.src.replace('logo-f.png', 'logo-f-letra.png');
   }
 })();

@@ -406,3 +406,5 @@ footer{background:var(--navy-deep);color:#cdd9ec;padding:52px 0 40px}
 .brand.has-globo{display:flex;align-items:center;gap:4px}
 .fx .hero-art img{will-change:transform}
 .fx .btn{transition:transform .2s ease-out,background-color .15s,color .15s,box-shadow .2s}
+
+.foot-wm-icon.globo{box-sizing:content-box;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px rgba(15,42,94,.9),0 4px 14px rgba(0,0,0,.35);background:#fff;width:50px;height:50px}
