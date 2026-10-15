@@ -372,7 +372,9 @@ footer{background:var(--navy-deep);color:#cdd9ec;padding:52px 0 40px}
 .hero-art{position:relative;background:radial-gradient(circle at 50% 35%,#16397a,var(--navy-deep) 75%)}
 .hero-art .hero-3d{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity 1s ease}
 .hero-art.is-3d .hero-3d{opacity:1}
-.hero-art.is-3d img{opacity:0;transition:opacity 1s ease}
+.hero-art.is-3d img{opacity:1;filter:saturate(.9) contrast(1.05)}
+.hero-art.is-3d::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(10,29,68,.55),rgba(10,29,68,.25) 45%,rgba(10,29,68,.7))}
+.hero-art .hero-3d{z-index:2}
 .fx .hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
 .fx .hero h1 .w>span{display:inline-block;transform:translateY(110%);animation:wordUp .8s cubic-bezier(.2,.8,.2,1) forwards}
 @keyframes wordUp{to{transform:translateY(0)}}

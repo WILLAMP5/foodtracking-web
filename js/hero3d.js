@@ -11,7 +11,7 @@ if (host) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
   const scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x0a1d44, 14, 30);
+  
   const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 60);
   camera.position.set(0, 4.2, 14); camera.lookAt(0, 0.4, 0);
 
@@ -27,7 +27,7 @@ if (host) {
 
   /* suelo */
   const grid = new THREE.GridHelper(24, 24, 0x4f93e6, 0x1f5fb0);
-  grid.material.transparent = true; grid.material.opacity = 0.35; grid.position.y = -1.6; world.add(grid);
+  grid.material.transparent = true; grid.material.opacity = 0.28; grid.position.y = -1.6; world.add(grid);
 
   /* tanques */
   const tanks = [];
