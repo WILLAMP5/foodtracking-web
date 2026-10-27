@@ -1,6 +1,6 @@
 /* Esferas que giran como un globo terráqueo (canvas 2D, sin librerías). */
 (function () {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  /* El giro del logo es parte de la marca: se mantiene aunque el sistema pida menos animaciones (es lento y de baja amplitud). */
 
   function tex(w, h, draw) { var c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); return c; }
 
@@ -64,10 +64,10 @@
   /* encabezado: esfera del logo girando + texto de marca */
   var logo = document.querySelector('.brand .logo') || document.querySelector('a.logo img');
   if (logo) {
-    var cv = document.createElement('canvas'); cv.className = 'globo'; cv.width = cv.height = size(54);
+    var cv = document.createElement('canvas'); cv.className = 'globo'; cv.width = cv.height = size(70);
     cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', logo.getAttribute('alt') || 'Food Tracking Perú');
     var tx = document.createElement('img'); tx.className = 'brand-texto'; tx.alt = ''; tx.setAttribute('aria-hidden', 'true');
-    tx.src = logo.getAttribute('src').replace('logo-minimalista.jpg', 'logo-texto.png').replace('logo.png', 'logo-texto.png'); tx.height = 34; tx.width = 121;
+    tx.src = logo.getAttribute('src').replace('logo-minimalista.jpg', 'logo-texto.png').replace('logo.png', 'logo-texto.png'); tx.height = 40; tx.width = 142;
     tx.onload = function () {
       var br = logo.parentNode; br.classList.add('has-globo'); br.insertBefore(cv, logo); br.insertBefore(tx, logo); logo.style.display = 'none';
       globo(cv, texLogo(), { tilt: -0.5, roll: -0.25, speed: 0.55 });

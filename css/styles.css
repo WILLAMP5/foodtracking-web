@@ -261,7 +261,7 @@ footer.site a{text-decoration:none}footer.site a:hover{color:#fff;text-decoratio
 @media (max-width:960px){.row3{grid-template-columns:1fr}}
 
 .logo{display:flex;align-items:center;gap:10px}
-.logo canvas.globo{width:54px;height:54px;flex:none}
-.logo .brand-texto{height:34px;width:auto}
+.logo canvas.globo{width:70px;height:70px;flex:none}
+.logo .brand-texto{height:40px;width:auto}
 .fbrand canvas.globo{border-radius:50%}
 footer.site{padding-bottom:96px}
