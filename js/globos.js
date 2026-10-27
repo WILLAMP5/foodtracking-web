@@ -70,7 +70,7 @@
     tx.src = logo.getAttribute('src').replace('logo-minimalista.jpg', 'logo-texto.png').replace('logo.png', 'logo-texto.png'); tx.height = 40; tx.width = 142;
     tx.onload = function () {
       var br = logo.parentNode; br.classList.add('has-globo'); br.insertBefore(cv, logo); br.insertBefore(tx, logo); logo.style.display = 'none';
-      globo(cv, texLogo(), { tilt: -0.5, roll: -0.25, speed: 0.55 });
+      globo(cv, texLogo(), { tilt: -0.5, roll: -0.25, speed: 1.4 });
     };
   }
 
@@ -80,7 +80,7 @@
     var im = new Image(); im.onload = function () {
       var c2 = document.createElement('canvas'); c2.className = f.className + ' globo'; c2.width = c2.height = size(50); c2.style.width = c2.style.height = '50px'; c2.style.flex = 'none'; c2.setAttribute('aria-hidden', 'true');
       f.parentNode.replaceChild(c2, f);
-      globo(c2, texF(), { tilt: -0.28, speed: 0.9, over: function (ctx, S) { var w = S * 0.4, h = w * im.naturalHeight / im.naturalWidth; ctx.drawImage(im, (S - w) / 2, (S - h) / 2, w, h); } });
+      globo(c2, texF(), { tilt: -0.28, speed: 1.4, over: function (ctx, S) { var w = S * 0.4, h = w * im.naturalHeight / im.naturalWidth; ctx.drawImage(im, (S - w) / 2, (S - h) / 2, w, h); } });
     }; im.src = f.src.replace('logo-f.png', 'logo-f-letra.png').replace('isotipo.png', 'logo-f-letra.png');
   }
 })();
