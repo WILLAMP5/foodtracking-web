@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Willam Pari Hilasaca | Food Tracking Per&#250;</title>
+<meta name="description" content="Tarjeta digital de contacto de Willam Pari Hilasaca, Director General de Food Tracking Per&#250;. Consultor&#237;a en HACCP, ISO 22000, BRCGS y dise&#241;o 3D de plantas alimentarias.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Willam Pari Hilasaca | Food Tracking Per&#250;">
+<meta property="og:description" content="Director General de Food Tracking Per&#250;. Consultor&#237;a en inocuidad alimentaria.">
+<meta property="og:image" content="https://willamp5.github.io/foodtracking-web/img/logo-f.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://willamp5.github.io/foodtracking-web/img/logo-f.png">
+<link rel="icon" href="img/logo-f.png" type="image/png">
+<link rel="apple-touch-icon" href="img/logo-f.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Libre+Caslon+Text:wght@400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<style>
+  /* Layout: tarjeta tipo app movil. Cabecera azul marino con el logo, barra flotante de acciones que monta el borde, bloques de contacto, servicios y QR. */
+  :root {
+    --bg: #e9eef6; --card: #ffffff; --fg: #0d1b3a; --muted: #5d6a86; --line: #e1e7f1; --soft: #f1f5fb;
+    --navy: #0f2a5e; --navy-2: #173a7a; --sky: #4a8fe0; --sky-soft: #dbe8fa;
+    --crimson: #9b1c22; --crimson-on-navy: #ff9aa0; --wa: #1faa59;
+    --shadow: 0 18px 40px -18px rgba(15, 42, 94, .35);
+    --font-brand: "Poppins", "Segoe UI", sans-serif;
+    --font-serif: "Libre Caslon Text", Georgia, serif;
+    --font-body: "Manrope", "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #070e1f; --card: #0f1a33; --fg: #e9eefb; --muted: #9ba8c6; --line: #1f2d50;
+      --soft: #15223f; --sky: #7db2f2; --sky-soft: #1b2e55; --crimson: #ff8d94;
+      --shadow: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #070e1f; --card: #0f1a33; --fg: #e9eefb; --muted: #9ba8c6; --line: #1f2d50;
+    --soft: #15223f; --sky: #7db2f2; --sky-soft: #1b2e55; --crimson: #ff8d94;
+    --shadow: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font-body);
+    font-size: 15px; line-height: 1.5;
+    padding: env(safe-area-inset-top, 0px) 16px calc(env(safe-area-inset-bottom, 0px) + 40px);
+    padding-top: calc(env(safe-area-inset-top, 0px) + 28px);
+  }
+  .card { max-width: 430px; margin-inline: auto; background: var(--card); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow); }
+  header { position: relative; color: #fff; padding: 26px 24px 64px; background: radial-gradient(120% 90% at 100% 0%, var(--navy-2) 0%, transparent 60%), var(--navy); overflow: hidden; }
+  header .mesh { position: absolute; right: -90px; top: -70px; width: 300px; height: 300px; opacity: .16; pointer-events: none; }
+  .brand { position: relative; display: flex; align-items: center; gap: 14px; }
+  .globe { width: 64px; height: 64px; border-radius: 50%; flex: none; background: #fff; padding: 4px; box-shadow: 0 0 0 4px rgba(255,255,255,.12); }
+  .globe img { width: 100%; height: 100%; border-radius: 50%; display: block; object-fit: cover; }
+  .wordmark { line-height: 1.1; }
+  .wordmark .ft { font-family: var(--font-brand); font-weight: 700; font-size: 19px; letter-spacing: .01em; }
+  .wordmark .qa { font-family: var(--font-serif); font-size: 14px; color: var(--crimson-on-navy); }
+  h1 { position: relative; font-family: var(--font-brand); font-weight: 700; font-size: 30px; line-height: 1.1; letter-spacing: -.01em; margin: 30px 0 6px; text-wrap: balance; }
+  .role { position: relative; margin: 0; font-size: 15px; color: rgba(255,255,255,.85); }
+  .meta { position: relative; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .meta span { font-size: 12px; font-weight: 600; letter-spacing: .04em; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); }
+  .meta .mono { font-family: var(--font-mono); font-weight: 500; }
+  .actions { position: relative; margin: -38px 16px 0; background: var(--card); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); padding: 12px 6px; }
+  .act { display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; color: var(--fg); font-size: 12px; font-weight: 600; padding: 4px 2px; border-radius: 12px; }
+  .act .ic { width: 46px; height: 46px; border-radius: 15px; display: grid; place-items: center; background: var(--sky-soft); color: var(--sky); transition: transform .15s ease; }
+  .act.wa .ic { background: var(--wa); color: #fff; }
+  .act svg { width: 22px; height: 22px; }
+  .act:hover .ic { transform: translateY(-2px); }
+  :focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; }
+  main { padding: 24px 20px 6px; display: flex; flex-direction: column; gap: 24px; }
+  h2 { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin: 0 0 10px; }
+  .rows { display: flex; flex-direction: column; gap: 8px; }
+  .row { display: flex; align-items: center; gap: 12px; padding: 11px 12px; background: var(--soft); border-radius: 14px; min-width: 0; }
+  .row .ri { width: 34px; height: 34px; flex: none; border-radius: 10px; display: grid; place-items: center; background: var(--card); color: var(--sky); }
+  .row .ri svg { width: 17px; height: 17px; }
+  .row .txt { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .row .lbl { font-size: 11px; color: var(--muted); font-weight: 600; }
+  .row .val { font-size: 14.5px; font-weight: 600; color: var(--fg); overflow-wrap: anywhere; text-decoration: none; }
+  a.val:hover { text-decoration: underline; }
+  .copy { flex: none; font: inherit; font-size: 12px; font-weight: 700; color: var(--sky); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; min-width: 74px; }
+  .copy:hover { background: var(--card); }
+  .services { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .services li { padding: 12px; border: 1px solid var(--line); border-radius: 14px; font-size: 13.5px; font-weight: 600; line-height: 1.3; }
+  .services li small { display: block; font-weight: 500; color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .diff { margin: 0; padding: 16px 18px; border-radius: 16px; font-size: 14.5px; font-weight: 500; background: var(--sky-soft); color: var(--fg); }
+  .diff b { color: var(--crimson); font-family: var(--font-serif); font-weight: 400; font-size: 16px; display: block; margin-bottom: 4px; }
+  .social { display: flex; gap: 8px; flex-wrap: wrap; }
+  .social a { flex: 1; min-width: 130px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: var(--fg); border: 1px solid var(--line); border-radius: 14px; padding: 11px 12px; font-size: 14px; font-weight: 600; }
+  .social a:hover { background: var(--soft); }
+  .social svg { width: 18px; height: 18px; color: var(--sky); }
+  .qr { margin: 22px 16px 16px; padding: 18px; border-radius: 20px; color: #fff; background: var(--navy); display: flex; align-items: center; gap: 16px; }
+  .qr-box { background: #fff; padding: 9px; border-radius: 12px; flex: none; line-height: 0; }
+  .qr-box svg { width: 108px; height: 108px; display: block; }
+  .qr p { margin: 0; font-size: 13.5px; color: rgba(255,255,255,.78); }
+  .qr strong { display: block; color: #fff; font-family: var(--font-brand); font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .tag { text-align: center; font-family: var(--font-serif); font-size: 13px; color: var(--muted); margin: 18px 0 0; }
+  .back { display: block; text-align: center; font-size: 13px; color: var(--muted); margin: 14px 0 0; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  @media (max-width: 380px) { h1 { font-size: 26px; } .qr { flex-direction: column; text-align: center; } .services { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { .act .ic { transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <header>
+    <svg class="mesh" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width=".6" aria-hidden="true">
+      <circle cx="50" cy="50" r="48"/><ellipse cx="50" cy="50" rx="16" ry="48"/><ellipse cx="50" cy="50" rx="32" ry="48"/>
+      <ellipse cx="50" cy="50" rx="48" ry="16"/><ellipse cx="50" cy="50" rx="48" ry="32"/><path d="M2 50h96M50 2v96"/>
+    </svg>
+    <div class="brand">
+      <div class="globe"><img src="img/logo-f.png" alt="Logo Food Tracking Per&#250;"></div>
+      <div class="wordmark"><div class="ft">FOOD TRACKING</div><div class="qa">Quality Assurance</div></div>
+    </div>
+    <h1>Willam Pari Hilasaca</h1>
+    <p class="role">Director General &middot; Consultor en inocuidad alimentaria</p>
+    <div class="meta"><span class="mono">CIP N&deg; 149723</span><span>Lima, Per&#250;</span></div>
+  </header>
+
+  <nav class="actions" aria-label="Contacto r&aacute;pido">
+    <a class="act wa" href="https://wa.me/51952255734" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></span>WhatsApp</a>
+    <a class="act" href="tel:+51952255734">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>Llamar</a>
+    <a class="act" href="mailto:wparih@gmail.com">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>Correo</a>
+    <a class="act" href="index.html">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>Web</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Contacto</h2>
+      <div class="rows">
+        <div class="row">
+          <span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+          <span class="txt"><span class="lbl">Celular / WhatsApp</span><span class="val" id="v-tel">+51 952 255 734</span></span>
+          <button class="copy" data-target="v-tel" type="button">Copiar</button>
+        </div>
+        <div class="row">
+          <span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <span class="txt"><span class="lbl">Correo</span><span class="val" id="v-mail">wparih@gmail.com</span></span>
+          <button class="copy" data-target="v-mail" type="button">Copiar</button>
+        </div>
+        <div class="row">
+          <span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
+          <span class="txt"><span class="lbl">Sitio web</span><a class="val" href="https://willamp5.github.io/foodtracking-web" target="_blank" rel="noopener">willamp5.github.io/foodtracking-web</a></span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Servicios</h2>
+      <ul class="services">
+        <li>Gesti&oacute;n integral<small>HACCP &middot; BPM &middot; PGH</small></li>
+        <li>Certificaci&oacute;n<small>ISO 22000 &middot; BRCGS</small></li>
+        <li>Regulaci&oacute;n sanitaria<small>Registros y habilitaciones</small></li>
+        <li>Auditor&iacute;a<small>Internas y de proveedores</small></li>
+        <li>Transformaci&oacute;n digital<small>Registros de calidad</small></li>
+        <li>Ingenier&iacute;a 3D<small>Dise&ntilde;o de planta</small></li>
+      </ul>
+    </section>
+
+    <p class="diff"><b>Simulamos antes de construir</b>Somos la &uacute;nica consultora en el Per&uacute; que simula la rentabilidad de tu planta antes de construirla.</p>
+
+    <div class="social">
+      <a href="https://www.facebook.com/foodtrackingperu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.6 2 10.7 3.6 10.7 6v2H8.5v3h2.2v11H14V11h2.6l.4-3z"/></svg>Facebook</a>
+      <a href="https://www.instagram.com/foodtrackingperu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a>
+    </div>
+  </main>
+
+  <div class="qr">
+    <div class="qr-box" id="qr" aria-label="C&oacute;digo QR con los datos de contacto"></div>
+    <p><strong>Guarda mi contacto</strong>Escanea el c&oacute;digo con la c&aacute;mara de tu celular para agregarme a tu agenda.</p>
+  </div>
+</div>
+<p class="tag">Tu inversi&oacute;n protegida, tu calidad asegurada.</p>
+<a class="back" href="index.html">&larr; Volver al sitio de Food Tracking Per&uacute;</a>
+
+<script>
+  (function () {
+    var vcard = [
+      "BEGIN:VCARD", "VERSION:3.0",
+      "N:Pari Hilasaca;Willam;;;", "FN:Willam Pari Hilasaca",
+      "ORG:Food Tracking Perú", "TITLE:Director General",
+      "TEL;TYPE=CELL:+51952255734", "EMAIL:wparih@gmail.com",
+      "URL:https://willamp5.github.io/foodtracking-web",
+      "ADR;TYPE=WORK:;;;Lima;;;Perú", "END:VCARD"
+    ].join("\n");
+    var box = document.getElementById("qr");
+    try {
+      var qr = qrcode(0, "M"); qr.addData(vcard); qr.make();
+      box.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+    } catch (e) { box.hidden = true; }
+
+    function selectText(el) {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+    document.querySelectorAll(".copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var el = document.getElementById(btn.dataset.target);
+        var done = function (ok) {
+          btn.textContent = ok ? "Copiado" : "Selecciona";
+          setTimeout(function () { btn.textContent = "Copiar"; }, 1800);
+        };
+        try {
+          navigator.clipboard.writeText(el.textContent.trim()).then(function () { done(true); }, function () { selectText(el); done(false); });
+        } catch (e) { selectText(el); done(false); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
