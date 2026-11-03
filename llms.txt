@@ -3,11 +3,11 @@
 > Consultoría de inocuidad alimentaria en Lima, con atención en todo el Perú: implementación de HACCP, BPM, ISO 22000 y BRCGS, diseño 3D y simulación de plantas de alimentos antes de construir, y digitalización de registros de calidad. Dirigida por el Ing. Willam Pari Hilasaca (CIP N.° 149723).
 
 ## Servicios
-- Sistemas de gestión integral: implementación de HACCP, BPM/PGH, ISO 22000, BRCGS, IFS, FSSC 22000 y SQF, con documentación lista para auditoría. https://willamp5.github.io/foodtracking-web/servicios/gestion-integral.html
-- Ingeniería inmersiva 3D: diseño 3D de plantas alimentarias HACCP-ready, simulación del proceso con FlexSim (capacidad, colas, cuellos de botella) y expediente para la habilitación sanitaria. https://willamp5.github.io/foodtracking-web/servicios/ingenieria-3d.html
-- Regulación y compliance: registros sanitarios, habilitaciones y certificaciones de exportación ante DIGESA, SENASA y MINSA. https://willamp5.github.io/foodtracking-web/servicios/regulacion.html
-- Transformación digital: registros BPM y HACCP del papel a la nube, con firmas, versiones y acceso desde cualquier dispositivo. https://willamp5.github.io/foodtracking-web/servicios/transformacion-digital.html
-- Auditoría y capacitación: diagnóstico GAP, pre-auditorías y capacitación in-company en BPM y HACCP. https://willamp5.github.io/foodtracking-web/servicios/auditoria.html
+- Sistemas de gestión integral: implementación de HACCP, BPM/PGH, ISO 22000, BRCGS, IFS, FSSC 22000 y SQF, con documentación lista para auditoría. https://foodtrackingperu.com/servicios/gestion-integral.html
+- Ingeniería inmersiva 3D: diseño 3D de plantas alimentarias HACCP-ready, simulación del proceso con FlexSim (capacidad, colas, cuellos de botella) y expediente para la habilitación sanitaria. https://foodtrackingperu.com/servicios/ingenieria-3d.html
+- Regulación y compliance: registros sanitarios, habilitaciones y certificaciones de exportación ante DIGESA, SENASA y MINSA. https://foodtrackingperu.com/servicios/regulacion.html
+- Transformación digital: registros BPM y HACCP del papel a la nube, con firmas, versiones y acceso desde cualquier dispositivo. https://foodtrackingperu.com/servicios/transformacion-digital.html
+- Auditoría y capacitación: diagnóstico GAP, pre-auditorías y capacitación in-company en BPM y HACCP. https://foodtrackingperu.com/servicios/auditoria.html
 
 ## Dónde trabajamos
 Lima, Callao y provincias de todo el Perú. Para proyectos fuera de Lima se coordinan visitas técnicas y reuniones virtuales.
@@ -24,4 +24,4 @@ DL 1062 (Ley de Inocuidad de los Alimentos), DS 007-98-SA, RM 495-2008 (BPM) y N
 - Facebook: https://www.facebook.com/foodtrackingperu
 - Instagram: https://www.instagram.com/foodtrackingperu/
 - LinkedIn: https://www.linkedin.com/company/foodtrackingperu/
-- Sitio web: https://willamp5.github.io/foodtracking-web/
+- Sitio web: https://foodtrackingperu.com/

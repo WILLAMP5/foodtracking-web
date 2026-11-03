@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://willamp5.github.io/foodtracking-web/sitemap.xml
+Sitemap: https://foodtrackingperu.com/sitemap.xml
