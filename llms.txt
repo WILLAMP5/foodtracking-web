@@ -4,10 +4,13 @@
 
 ## Servicios
 - Sistemas de gestión integral: implementación de HACCP, BPM/PGH, ISO 22000, BRCGS, IFS, FSSC 22000 y SQF, con documentación lista para auditoría. https://foodtrackingperu.com/servicios/gestion-integral.html
-- Ingeniería inmersiva 3D: diseño 3D de plantas alimentarias HACCP-ready, simulación del proceso con FlexSim (capacidad, colas, cuellos de botella) y expediente para la habilitación sanitaria. https://foodtrackingperu.com/servicios/ingenieria-3d.html
-- Regulación y compliance: registros sanitarios, habilitaciones y certificaciones de exportación ante DIGESA, SENASA y MINSA. https://foodtrackingperu.com/servicios/regulacion.html
+- Ingeniería inmersiva 3D: diseño 3D de plantas alimentarias HACCP-ready, simulación del proceso con FlexSim (capacidad, colas, cuellos de botella) y documentación para la validación del Plan HACCP o el certificado PGH. https://foodtrackingperu.com/servicios/ingenieria-3d.html
+- Regulación y compliance: registro sanitario, validación técnica oficial del Plan HACCP, certificado de Principios Generales de Higiene (PGH) y certificaciones de exportación ante DIGESA y SENASA. https://foodtrackingperu.com/servicios/regulacion.html
 - Transformación digital: registros BPM y HACCP del papel a la nube, con firmas, versiones y acceso desde cualquier dispositivo. https://foodtrackingperu.com/servicios/transformacion-digital.html
 - Auditoría y capacitación: diagnóstico GAP, pre-auditorías y capacitación in-company en BPM y HACCP. https://foodtrackingperu.com/servicios/auditoria.html
+
+## Guías
+- Habilitación sanitaria de planta: qué pide hoy DIGESA. La habilitación de fábrica ya no es el trámite vigente; hoy se pide la Validación Técnica Oficial del Plan HACCP o el Certificado PGH, y hay inspecciones sanitarias inopinadas. Incluye los requisitos de infraestructura del DS 007-98-SA, artículo por artículo. https://foodtrackingperu.com/guias/habilitacion-sanitaria-planta-alimentos.html
 
 ## Dónde trabajamos
 Lima, Callao y provincias de todo el Perú. Para proyectos fuera de Lima se coordinan visitas técnicas y reuniones virtuales.
