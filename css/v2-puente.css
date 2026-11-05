@@ -1,0 +1,16 @@
+/* Puente visual: páginas internas con la paleta de la portada v2 (se carga después de styles.css) */
+:root{
+  --ink:#0d1b2a;--navy:#0d1b2a;--navy2:#123456;
+  --cyan:#2a68c8;--sky:#9cc3f5;--amber:#9cc3f5;
+  --orange:#123456;--orange2:#0c2440;
+  --bg:#f5f4ef;--line:rgba(13,27,42,.12);--text:#2c3847;--muted:#5d6977;
+}
+.btn-primary{color:#fff;box-shadow:0 10px 24px -14px rgba(18,52,86,.9)}
+.btn-primary:hover{box-shadow:0 14px 30px -14px rgba(18,52,86,.95)}
+.btn .arr{background:rgba(255,255,255,.16);color:#fff}
+.btn-dark .arr{background:rgba(255,255,255,.16);color:#fff}
+h2 .serif{color:var(--navy2)}
+/* sobre fondos oscuros (encabezado de servicio y franja final) el botón principal va en blanco */
+.phero .btn-primary,.cta-band .btn-primary{background:#fff;color:#0d1b2a;box-shadow:0 12px 30px -16px rgba(0,0,0,.7)}
+.phero .btn-primary:hover,.cta-band .btn-primary:hover{background:#ecebe4}
+.phero .btn-primary .arr,.cta-band .btn-primary .arr{background:#e4ecf8;color:#0d1b2a}
