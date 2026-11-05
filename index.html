@@ -8,26 +8,28 @@
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Food Tracking Per&#250; &#8212; Consultor&#237;a HACCP, ISO 22000 y dise&#241;o de plantas">
 <meta property="og:description" content="Consultoría de inocuidad alimentaria que combina HACCP e ISO 22000, registros digitales y diseño 3D y simulación de plantas antes de construir.">
-<meta property="og:image" content="https://foodtrackingperu.com/img/logo-f.png">
-<meta property="og:image:width" content="600">
-<meta property="og:image:height" content="600">
+<meta property="og:image" content="https://foodtrackingperu.com/img/og-planta3d.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://foodtrackingperu.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Food Tracking Per&#250; &#8212; Consultor&#237;a HACCP y dise&#241;o de plantas alimentarias">
 <meta name="twitter:description" content="Implementaci&#243;n de HACCP, ISO 22000, BRCGS y BPM. Dise&#241;o 3D de plantas alimentarias. Lima, Per&#250;.">
-<meta name="twitter:image" content="https://foodtrackingperu.com/img/logo-f.png">
+<meta name="twitter:image" content="https://foodtrackingperu.com/img/og-planta3d.jpg">
 <link rel="canonical" href="https://foodtrackingperu.com/">
 
 <link rel="icon" href="img/logo-f.png" type="image/png">
 <link rel="apple-touch-icon" href="img/logo-f.png">
-<link rel="preload" as="image" href="img/hero-linea.jpg">
-<meta name="theme-color" content="#000b21">
+<link rel="preload" as="image" href="img/planta3d-poster.jpg">
+<meta name="theme-color" content="#08111f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/v2.css?v=1">
+<link rel="stylesheet" href="css/v2-3d.css?v=3">
+<link rel="stylesheet" href="css/v2-sec.css?v=1">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -148,175 +150,428 @@
 
 <header>
   <div class="bar" id="bar">
-    <a class="logo" href="#inicio" aria-label="Food Tracking – Quality Assurance"><img src="img/logo.png" alt="Food Tracking Quality Assurance"></a>
+    <a class="logo" href="#inicio" aria-label="Food Tracking Perú, ir al inicio"><img src="img/logo.png" alt="Food Tracking Perú"></a>
     <nav aria-label="Principal"><div class="links" id="menu">
-      <a href="#inicio" aria-current="page">Inicio</a><a href="#servicios">Servicios</a><a href="#ingenieria">Ingeniería 3D</a><a href="#metodo">Método</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+      <a href="#proyectos">Proyectos</a><a href="#servicios">Servicios</a><a href="#ingenieria">Simulación</a><a href="#digital">Registros</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
     </div></nav>
-    <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico <span class="arr">→</span></a>
-    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico <span class="arr" aria-hidden="true">→</span></a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
   </div>
 </header>
 
 <main id="main">
-<!-- HERO -->
-<section class="hero" id="inicio" style="padding:0">
-  <div class="bg" data-speed="0.15"></div><div class="grid"></div>
-  <div class="wrap">
-    <div>
-      <span class="pill mono"><i></i>Consultoría en inocuidad alimentaria · Lima, Perú</span>
-      <h1 data-split>Inocuidad que se <span class="serif">certifica.</span> Plantas que <span class="serif">producen.</span></h1>
-      <p class="lead rv">Más de 15 años implementando HACCP, ISO 22000 y BRCGS, y diseñando plantas de alimentos en 3D, para que pases auditorías con confianza y produzcas con eficiencia.</p>
-      <div class="cta rv" style="--d:.15s">
-        <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico <span class="arr">→</span></a>
-        <a class="btn btn-glass" href="#ingenieria">Ver ingeniería 3D</a>
+
+<!-- HERO 3D: maqueta interactiva con recorrido por scroll -->
+<section class="h3d" id="inicio" data-step="0">
+  <div class="h3d-stage">
+    <div class="h3d-frame">
+      <img class="h3d-poster" src="img/planta3d-poster.jpg" alt="" width="1600" height="900" fetchpriority="high">
+      <canvas id="planta3d" role="img" aria-label="Maqueta 3D de una planta de alimentos: zonas desde la recepción (zona sucia) hasta el envasado (alto cuidado) y el despacho, con flujos de producto, personal y residuos que no se cruzan" data-src="js/planta3d.js?v=2" data-size="533108"></canvas>
+      <div class="h3d-labels" aria-hidden="true">
+        <span class="lbl" data-k="z1"><b>Z1</b><i>Recepción</i><small>Zona sucia</small></span>
+        <span class="lbl" data-k="z2"><b>Z2</b><i>Almacén de insumos</i><small>Bajo riesgo</small></span>
+        <span class="lbl" data-k="z3"><b>Z3</b><i>Proceso</i><small>Riesgo medio</small></span>
+        <span class="lbl" data-k="z4"><b>Z4</b><i>Envasado</i><small>Alto cuidado</small></span>
+        <span class="lbl" data-k="z5"><b>Z5</b><i>Despacho</i><small>Producto terminado</small></span>
+        <span class="lbl" data-k="zp"><b>P</b><i>Vestuarios y esclusas</i><small>Personal</small></span>
+        <span class="lbl fl" data-k="producto"><i>Producto</i></span>
+        <span class="lbl fl pe" data-k="personal"><i>Personal</i></span>
+        <span class="lbl fl re" data-k="residuos"><i>Residuos</i></span>
+        <span class="lbl dm" data-k="largo"><i>48,00 m</i></span>
+        <span class="lbl dm" data-k="ancho"><i>24,00 m</i></span>
+      </div>
+      <div class="h3d-load" aria-hidden="true"><span class="n">000</span><span class="t">Cargando maqueta</span><i></i></div>
+      <span class="x tl" aria-hidden="true"></span><span class="x tr" aria-hidden="true"></span><span class="x bl" aria-hidden="true"></span><span class="x br" aria-hidden="true"></span>
+      <p class="h3d-meta" aria-hidden="true"><span>Modelo conceptual</span><span>Planta tipo · 48 × 24 m</span></p>
+      <p class="h3d-hint" aria-hidden="true"><span class="ms"></span>Arrastra para girar · baja para recorrer</p>
+    </div>
+
+    <div class="h3d-steps">
+      <div class="step on" data-step="0">
+        <span class="eyebrow">Consultoría HACCP y diseño de plantas de alimentos · Lima</span>
+        <h1>Ingeniería que <em>protege.</em><br>Inocuidad que <em>impulsa.</em></h1>
+        <p class="lede">Diseñamos y simulamos tu planta antes de construirla, implementamos HACCP y BPM listos para DIGESA, y dejamos tus registros funcionando en tablet. Un solo equipo, del plano a la auditoría.</p>
+        <div class="cta">
+          <a class="btn btn-light" href="#contacto">Solicitar diagnóstico <span class="arr" aria-hidden="true">→</span></a>
+          <a class="tlink" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="step" data-step="1">
+        <span class="k">01 · Zonificación higiénica</span>
+        <h2>De la zona sucia al <em>alto cuidado</em></h2>
+        <p>Cada área recibe el nivel de higiene que su riesgo exige. Las barreras se definen en el plano, antes de levantar un muro.</p>
+        <ul class="legend">
+          <li><button type="button" data-zone="z1"><i style="--c:#c8813f"></i>Z1 · Recepción · zona sucia</button></li>
+          <li><button type="button" data-zone="z2"><i style="--c:#8b95a3"></i>Z2 · Almacén · bajo riesgo</button></li>
+          <li><button type="button" data-zone="z3"><i style="--c:#3d7fe0"></i>Z3 · Proceso · riesgo medio</button></li>
+          <li><button type="button" data-zone="z4"><i style="--c:#5ad3ff"></i>Z4 · Envasado · alto cuidado</button></li>
+          <li><button type="button" data-zone="z5"><i style="--c:#b4c2d3"></i>Z5 · Producto terminado y despacho</button></li>
+        </ul>
+      </div>
+      <div class="step" data-step="2">
+        <span class="k">02 · Flujos sin cruces</span>
+        <h2>Producto, personal y residuos <em>nunca</em> se cruzan</h2>
+        <p>El producto avanza en una sola dirección. El personal entra por vestuarios y esclusas sanitarias. Los residuos salen por su propia puerta.</p>
+        <ul class="legend flows">
+          <li><span><i class="ln" style="--c:#5b9dff"></i>Producto: de la recepción al despacho</span></li>
+          <li><span><i class="dt" style="--c:#f2f6fb"></i>Personal: vestuario, esclusa y área</span></li>
+          <li><span><i class="dt" style="--c:#e0a24f"></i>Residuos: salida independiente</span></li>
+        </ul>
+      </div>
+      <div class="step" data-step="3">
+        <span class="k">03 · Del 3D al plano</span>
+        <h2>La maqueta se vuelve el <em>plano</em> de tu expediente</h2>
+        <p>Con cotas, áreas y flujos, listo para el diseño de detalle, la validación del plan HACCP y la inspección sanitaria.</p>
+        <a class="btn btn-light" href="#contacto">Cotizar mi planta <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <div class="side rv" style="--d:.3s">
-      <figure class="card-air"><img src="img/planta-aerea.jpg" alt="Vista aérea de una planta industrial de alimentos" fetchpriority="high"><span class="mono">Diseño de plantas</span></figure>
-      <div class="glass"><b>3D</b><p>Tu planta diseñada y simulada antes de construir</p></div>
-    </div>
+
+    <ol class="h3d-nav" aria-label="Recorrido de la maqueta">
+      <li><button type="button" data-go="0" aria-current="step"><span>Maqueta</span></button></li>
+      <li><button type="button" data-go="1"><span>Zonas</span></button></li>
+      <li><button type="button" data-go="2"><span>Flujos</span></button></li>
+      <li><button type="button" data-go="3"><span>Plano</span></button></li>
+    </ol>
   </div>
-  <div class="scroll" aria-hidden="true"></div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-label="Normas y entidades">
-  <div class="track" aria-hidden="true">
-    <span>HACCP</span><span>ISO 22000</span><span>FSSC 22000</span><span>BRCGS</span><span>SQF</span><span>BPM</span><span>DIGESA</span><span>SENASA</span>
-    <span>HACCP</span><span>ISO 22000</span><span>FSSC 22000</span><span>BRCGS</span><span>SQF</span><span>BPM</span><span>DIGESA</span><span>SENASA</span>
+<!-- NORMAS -->
+<div class="norms" aria-label="Normas y requisitos que implementamos">
+  <div class="wrap">
+    <p>Implementamos y preparamos para</p>
+    <ul>
+      <li>HACCP</li><li>BPM</li><li>PGH</li><li>Validación técnica oficial HACCP</li><li>ISO 22000</li><li>FSSC 22000</li><li>BRCGS</li>
+    </ul>
   </div>
 </div>
 
-<!-- SERVICIOS -->
-<section id="servicios">
+<!-- PROYECTOS -->
+<section id="proyectos" class="work-sec">
   <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow mono">Servicios</span><h2 style="margin-top:14px" data-split>Del plano a la <span class="serif">certificación</span></h2></div>
-      <p class="rv">Un solo equipo para diseñar, implementar, regularizar y auditar tu planta de alimentos.</p>
+    <div class="shead">
+      <div><span class="eyebrow">Proyectos</span><h2 class="h2" data-split>Plantas que diseñamos <em>antes</em> de que existieran</h2></div>
+      <p class="lede rv">Modelos 3D, recorridos y simulaciones de proyectos reales. Mostramos los diseños sin datos del cliente ni de su ubicación.</p>
     </div>
-    <div class="svc">
-      <a class="tile w7 rv" href="servicios/gestion-integral.html"><img src="img/haccp-plan.jpg" alt="Profesional revisando un plan HACCP en una línea de producción" loading="lazy"><span class="num mono">01</span><span class="go">→</span>
-        <div class="in"><h3>Sistemas de gestión integral</h3><p>Implementación de HACCP, ISO 22000, BRCGS y FSSC 22000 adaptada a tu realidad productiva.</p><div class="chips"><span>HACCP</span><span>ISO 22000</span><span>BRCGS</span><span>Auditorías internas</span></div></div></a>
-      <a class="tile w5 rv" href="servicios/ingenieria-3d.html" style="--d:.1s"><img src="img/diseno-3d.jpg" alt="Modelo 3D de una planta de proceso de alimentos" loading="lazy"><span class="num mono">02</span><span class="go">→</span>
-        <div class="in"><h3>Ingeniería inmersiva 3D</h3><p>Layouts modelados para reducir mermas, cruces de flujo y reprocesos antes de construir.</p></div></a>
-      <a class="tile rv" href="servicios/regulacion.html"><img src="img/regulacion.jpg" alt="Documento aprobado sobre mesa de laboratorio" loading="lazy"><span class="num mono">03</span><span class="go">→</span>
-        <div class="in"><h3>Regulación y compliance</h3><p>Trámites ante DIGESA y SENASA: registro sanitario, validación HACCP y certificado PGH.</p></div></a>
-      <a class="tile rv" href="servicios/transformacion-digital.html" style="--d:.1s"><img src="img/digital.jpg" alt="Tablet con tablero de control y trazabilidad en planta" loading="lazy"><span class="num mono">04</span><span class="go">→</span>
-        <div class="in"><h3>Transformación digital</h3><p>Registros de control y trazabilidad en tiempo real para plantas inteligentes.</p></div></a>
-      <a class="tile rv" href="servicios/auditoria.html" style="--d:.2s"><img src="img/capacitacion.jpg" alt="Capacitación a personal en planta de alimentos" loading="lazy"><span class="num mono">05</span><span class="go">→</span>
-        <div class="in"><h3>Auditoría y capacitación</h3><p>Programas in-company con diagnóstico técnico y certificado de asistencia.</p></div></a>
+    <ol class="work">
+      <li class="card c7 rv">
+        <button type="button" class="media" data-video="img/proyectos/panificadora-recorrido.mp4" data-lbvideo="img/proyectos/panificadora-montaje.mp4" data-full="img/proyectos/panificadora-a.jpg" aria-label="Ampliar: panificadora en edificio de cinco niveles, con recorrido renderizado">
+          <img src="img/proyectos/panificadora-a.jpg" alt="Modelo 3D en corte de un edificio de cinco niveles con panificadora, escaleras y azotea" loading="lazy" width="1065" height="761">
+          <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="img/proyectos/panificadora-recorrido.mp4" type="video/mp4"></video>
+          <span class="badge">Recorrido renderizado</span>
+        </button>
+        <div class="meta"><span class="n">01</span><h3>Panificadora en edificio de cinco niveles</h3><p>Distribución por pisos, circulación vertical y recorrido virtual del interior.</p><ul class="tags"><li>Diseño 3D</li><li>Render</li><li>Panificación</li></ul></div>
+      </li>
+      <li class="card c5 rv" style="--d:.08s">
+        <button type="button" class="media" data-video="img/proyectos/cocina-central.mp4" data-full="img/proyectos/cocina-central.jpg" aria-label="Ampliar: cocina central de alimentación colectiva">
+          <img src="img/proyectos/cocina-central.jpg" alt="Vista superior en 3D de una cocina central con almacén de secos, cámaras y área de producción" loading="lazy" width="1500" height="820">
+          <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="img/proyectos/cocina-central.mp4" type="video/mp4"></video>
+          <span class="badge">Modelo navegable</span>
+        </button>
+        <div class="meta"><span class="n">02</span><h3>Cocina central de alimentación colectiva</h3><p>Almacenes, cámaras de frío, preelaborados y zona de lavado sin cruces.</p><ul class="tags"><li>Zonificación</li><li>Diseño 3D</li><li>Servicios de alimentación</li></ul></div>
+      </li>
+
+      <!-- serie café -->
+      <li class="card cafe rv">
+        <div class="cafe-txt">
+          <span class="n">03</span>
+          <span class="kick">Serie café · 4 proyectos</span>
+          <h3>Del grano en cereza al café <em>tostado</em></h3>
+          <p>Beneficio húmedo, secado en patio y tostado. Plantas para productores y cooperativas, diseñadas en 3D y una de ellas simulada en FlexSim antes de invertir.</p>
+          <ul class="tags"><li>Beneficio húmedo</li><li>Secado</li><li>Tostado</li><li>FlexSim</li></ul>
+        </div>
+        <div class="cafe-grid">
+          <button type="button" class="media" data-group="cafe" data-video="img/flexsim-cafe.mp4" data-full="img/proyectos/cafe-beneficio.jpg" data-title="Planta de beneficio húmedo" data-desc="Recepción, despulpado, fermentación y llenado, simulados en FlexSim antes de invertir." aria-label="Ampliar: planta de beneficio húmedo de café, con simulación">
+            <img src="img/proyectos/cafe-beneficio.jpg" alt="Modelo 3D de una planta de beneficio de café con tanques de fermentación, escaleras y almacén de sacos" loading="lazy" width="1600" height="674">
+            <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source src="img/flexsim-cafe.mp4" type="video/mp4"></video>
+            <span class="badge">Simulación FlexSim</span><span class="cap">Beneficio húmedo</span>
+          </button>
+          <button type="button" class="media" data-group="cafe" data-full="img/proyectos/ladera.jpg" data-title="Beneficio de café en ladera" data-desc="Áreas en secuencia siguiendo la pendiente del terreno, con accesos y vía de servicio." aria-label="Ampliar: beneficio de café en ladera">
+            <img src="img/proyectos/ladera.jpg" alt="Modelo 3D de una planta de beneficio de café alargada, implantada en un terreno con pendiente" loading="lazy" width="1322" height="786">
+            <span class="cap">Beneficio en ladera</span>
+          </button>
+          <button type="button" class="media" data-group="cafe" data-full="img/proyectos/patio.jpg" data-title="Beneficio con patio de secado" data-desc="Recepción vehicular, fermentación, almacén y un patio amplio para el secado del grano." aria-label="Ampliar: beneficio de café con patio de secado">
+            <img src="img/proyectos/patio.jpg" alt="Modelo 3D de una planta de café con tanques, recepción vehicular y un gran patio de secado" loading="lazy" width="1600" height="704">
+            <span class="cap">Patio de secado</span>
+          </button>
+          <button type="button" class="media plan" data-group="cafe" data-full="img/proyectos/cafe-tostado.jpg" data-title="Planta de café tostado" data-desc="Distribución con cotas: almacenes, tostado, envasado, vestuarios y acopio de residuos." aria-label="Ampliar: plano de planta de café tostado">
+            <img src="img/proyectos/cafe-tostado.jpg" alt="Plano de distribución de una planta de café tostado con cotas, almacenes, tostado, envasado, vestuarios y SS.HH." loading="lazy" width="1800" height="1737">
+            <span class="cap">Café tostado · plano</span>
+          </button>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SERVICIOS POR SITUACIÓN -->
+<section id="servicios" class="svc-sec">
+  <div class="wrap">
+    <div class="shead">
+      <div><span class="eyebrow">Servicios</span><h2 class="h2" data-split>Nos llaman cuando hay algo <em>en juego</em></h2></div>
+      <p class="lede rv">Casi todas las empresas llegan en uno de estos cinco momentos. Elige el tuyo y entra al servicio.</p>
     </div>
+    <ul class="svc rv">
+      <li class="on"><a class="sv" href="servicios/ingenieria-3d.html" style="--c:#4c8dff">
+        <span class="sv-n">01</span><span class="sv-v" aria-hidden="true">Ingeniería 3D</span><span class="sv-plus" aria-hidden="true"></span>
+        <svg class="sv-art" viewBox="0 0 320 220" aria-hidden="true">
+          <path class="g" d="M30 26h260M30 20v12M290 20v12"/><text x="160" y="20" text-anchor="middle">48,00 m</text>
+          <rect class="ln" x="30" y="44" width="260" height="140" rx="3"/>
+          <rect class="z" style="--o:.22" x="31" y="45" width="63" height="138" fill="#c8813f"/><rect class="z" style="--o:.18" x="96" y="45" width="63" height="138" fill="#8b95a3"/><rect class="z" style="--o:.3" x="161" y="45" width="63" height="138" fill="#3d7fe0"/><rect class="z" style="--o:.3" x="226" y="45" width="63" height="138" fill="#5ad3ff"/>
+          <path class="ln" d="M95 44v52M95 122v62M160 44v52M160 122v62M225 44v52M225 122v62"/>
+          <circle class="ln" cx="180" cy="66" r="9"/><circle class="ln" cx="204" cy="66" r="9"/><rect class="ln" x="238" y="150" width="40" height="18" rx="2"/>
+          <path class="flow" d="M10 109H310"/><path class="ac" d="M300 101l10 8-10 8"/>
+        </svg>
+        <div class="sv-body">
+          <span class="sv-tag">Ingeniería 3D y simulación</span>
+          <h3>¿Vas a construir, ampliar o remodelar tu planta?</h3>
+          <p>Zonificación higiénica, flujos sin cruces y capacidad medida en FlexSim antes de invertir.</p>
+          <span class="sv-cta">Ver servicio <i aria-hidden="true">→</i></span>
+        </div>
+      </a></li>
+      <li><a class="sv" href="servicios/regulacion.html" style="--c:#e0a24f">
+        <span class="sv-n">02</span><span class="sv-v" aria-hidden="true">Regulación DIGESA</span><span class="sv-plus" aria-hidden="true"></span>
+        <svg class="sv-art" viewBox="0 0 320 220" aria-hidden="true">
+          <rect class="ln" x="92" y="30" width="122" height="168" rx="12"/><rect class="ln fill" x="124" y="20" width="58" height="22" rx="7"/>
+          <g class="rows"><circle class="ac" cx="114" cy="70" r="7"/><path class="ac" d="M110 70l3 3 5-6"/><path class="ln" d="M130 70h64"/>
+          <circle class="ac" cx="114" cy="98" r="7"/><path class="ac" d="M110 98l3 3 5-6"/><path class="ln" d="M130 98h52"/>
+          <circle class="ac" cx="114" cy="126" r="7"/><path class="ac" d="M110 126l3 3 5-6"/><path class="ln" d="M130 126h60"/>
+          <circle class="ln" cx="114" cy="154" r="7"/><path class="ln" d="M130 154h40"/></g>
+          <circle class="ac seal" cx="234" cy="160" r="34"/><circle class="ac" cx="234" cy="160" r="26" stroke-dasharray="3 4"/><path class="ac thick" d="M220 160l9 9 18-20"/>
+        </svg>
+        <div class="sv-body">
+          <span class="sv-tag">Regulación sanitaria</span>
+          <h3>¿DIGESA te inspecciona o necesitas PGH o validación HACCP?</h3>
+          <p>Preparamos documentos, planta y equipo para la inspección, que llega sin aviso.</p>
+          <span class="sv-cta">Ver servicio <i aria-hidden="true">→</i></span>
+        </div>
+      </a></li>
+      <li><a class="sv" href="servicios/gestion-integral.html" style="--c:#5ad3ff">
+        <span class="sv-n">03</span><span class="sv-v" aria-hidden="true">HACCP · ISO · BRCGS</span><span class="sv-plus" aria-hidden="true"></span>
+        <svg class="sv-art" viewBox="0 0 320 220" aria-hidden="true">
+          <rect class="ln" x="14" y="88" width="62" height="38" rx="6"/><text x="45" y="111" text-anchor="middle">Peligro</text>
+          <path class="ln" d="M76 107h22"/><path class="ln" d="M93 102l6 5-6 5"/>
+          <rect class="ln" x="100" y="88" width="62" height="38" rx="6"/><text x="131" y="111" text-anchor="middle">Control</text>
+          <path class="ln" d="M162 107h18"/><path class="ln" d="M175 102l6 5-6 5"/>
+          <path class="ac fillc" d="M212 77l30 30-30 30-30-30z"/><text class="dark" x="212" y="111" text-anchor="middle">PCC</text>
+          <path class="ln" d="M242 107h16"/><path class="ln" d="M253 102l6 5-6 5"/>
+          <rect class="ln" x="260" y="88" width="50" height="38" rx="6"/><text x="285" y="111" text-anchor="middle">Registro</text>
+          <path class="ln" d="M212 137v26"/><rect class="ln" x="180" y="164" width="64" height="30" rx="6"/><text x="212" y="183" text-anchor="middle">Límite</text>
+          <path class="g" d="M14 54h296"/><text x="14" y="44">Plan HACCP</text>
+        </svg>
+        <div class="sv-body">
+          <span class="sv-tag">Sistemas de gestión</span>
+          <h3>¿Un cliente o una certificadora te exige HACCP, ISO 22000 o BRCGS?</h3>
+          <p>Implementamos el sistema a la medida de tu planta y te acompañamos hasta la auditoría.</p>
+          <span class="sv-cta">Ver servicio <i aria-hidden="true">→</i></span>
+        </div>
+      </a></li>
+      <li><a class="sv" href="servicios/transformacion-digital.html" style="--c:#3fc98e">
+        <span class="sv-n">04</span><span class="sv-v" aria-hidden="true">Registros digitales</span><span class="sv-plus" aria-hidden="true"></span>
+        <svg class="sv-art" viewBox="0 0 320 220" aria-hidden="true">
+          <rect class="ln" x="66" y="18" width="188" height="186" rx="18"/><rect class="ln" x="80" y="34" width="160" height="150" rx="6"/>
+          <path class="ln" d="M92 54h72"/><rect class="ac fillc" x="196" y="48" width="32" height="12" rx="4"/>
+          <path class="ln" d="M92 80h56"/><rect class="ac fillc" x="196" y="74" width="32" height="12" rx="4"/>
+          <path class="ln" d="M92 106h64"/><rect class="ac fillc" x="196" y="100" width="32" height="12" rx="4"/>
+          <path class="ln" d="M92 132h48"/><rect class="ln" x="196" y="126" width="32" height="12" rx="4"/>
+          <path class="ac sig" d="M96 166c10-14 16-14 18-2s10 6 16-6 12-4 14 6 10 0 18-6"/>
+          <rect class="ac fillc" x="246" y="150" width="48" height="26" rx="6"/><text class="dark" x="270" y="168" text-anchor="middle">PDF</text>
+        </svg>
+        <div class="sv-body">
+          <span class="sv-tag">Transformación digital</span>
+          <h3>¿Tus registros siguen en papel?</h3>
+          <p>Registros BPM y HACCP en tablet, con firma en pantalla, trazabilidad por lote y PDF listo.</p>
+          <span class="sv-cta">Ver servicio <i aria-hidden="true">→</i></span>
+        </div>
+      </a></li>
+      <li><a class="sv" href="servicios/auditoria.html" style="--c:#a68bff">
+        <span class="sv-n">05</span><span class="sv-v" aria-hidden="true">Auditoría y capacitación</span><span class="sv-plus" aria-hidden="true"></span>
+        <svg class="sv-art" viewBox="0 0 320 220" aria-hidden="true">
+          <circle class="ln" cx="104" cy="110" r="58"/><circle class="ac ring" cx="104" cy="110" r="58"/>
+          <path class="ac thick" d="M82 110l15 15 30-32"/>
+          <g class="ln"><circle cx="208" cy="86" r="14"/><path d="M182 136c4-18 14-26 26-26s22 8 26 26"/><circle cx="262" cy="96" r="11"/><path d="M242 136c3-14 10-20 20-20s17 6 20 20"/></g>
+          <path class="g" d="M176 160h120"/><path class="g" d="M176 176h86"/>
+        </svg>
+        <div class="sv-body">
+          <span class="sv-tag">Auditoría y capacitación</span>
+          <h3>¿Tu equipo necesita capacitación o una auditoría interna?</h3>
+          <p>Programas in-company con diagnóstico técnico y certificado de asistencia.</p>
+          <span class="sv-cta">Ver servicio <i aria-hidden="true">→</i></span>
+        </div>
+      </a></li>
+    </ul>
   </div>
 </section>
 
 <!-- INGENIERÍA 3D -->
-<section class="dark" id="ingenieria">
-  <div class="wrap eng">
-    <div>
-      <span class="eyebrow mono" style="color:var(--amber)">Ingeniería 3D & BIM</span>
-      <h2 style="margin-top:14px" data-split>Mira tu planta <span class="serif">antes</span> de construirla</h2>
-      <p class="lead rv">Modelamos zonificación higiénica, flujos de personal y producto, y puntos de control, y simulamos la producción en FlexSim para detectar errores y cuellos de botella cuando corregirlos todavía es barato.</p>
-      <ul class="feat">
-        <li class="rv"><b>01</b><div><strong>Flujos sin cruces</strong><span>Producto crudo, terminado, personal y residuos separados desde el diseño.</span></div></li>
-        <li class="rv" style="--d:.1s"><b>02</b><div><strong>Zonificación higiénica</strong><span>Áreas de alto y bajo riesgo definidas según normativa.</span></div></li>
-        <li class="rv" style="--d:.2s"><b>03</b><div><strong>Menos mermas y reprocesos</strong><span>Distancias y capacidades optimizadas con el modelo.</span></div></li>
-      </ul>
-      <p class="rv" style="margin:0 0 22px;color:rgba(255,255,255,.8)">¿Qué revisa la autoridad sanitaria en tu planta? <a href="guias/habilitacion-sanitaria-planta-alimentos.html" style="color:var(--amber)">Lee la guía: qué pide hoy DIGESA →</a></p>
-      <a class="btn btn-primary" href="#contacto">Cotizar mi planta <span class="arr">→</span></a>
-    </div>
-    <div class="model rv">
-      <img src="img/diseno-3d.jpg" alt="Modelo 3D de planta de alimentos con línea de proceso y pallets" loading="lazy">
-      <button class="pin" style="left:28%;top:46%" aria-label="Zona de proceso"><span class="tip"><b>Zona de proceso</b>Equipos en acero inox con acceso para limpieza CIP.</span></button>
-      <button class="pin" style="left:52%;top:62%" aria-label="Flujo de producto"><span class="tip"><b>Flujo de producto</b>Recorrido lineal sin retrocesos ni cruces.</span></button>
-      <button class="pin" style="left:80%;top:56%" aria-label="Almacén y despacho"><span class="tip"><b>Almacén y despacho</b>Racks y andenes dimensionados al volumen real.</span></button>
+<section id="ingenieria">
+  <div class="wrap">
+    <div class="panel eng">
+      <div>
+        <span class="eyebrow">Ingeniería 3D y simulación</span>
+        <h2 class="h2" data-split>Mira tu planta <em>antes</em> de construirla</h2>
+        <p class="lede rv">Modelamos zonificación higiénica, flujos de personal y producto, y puntos de control. Luego simulamos la producción en FlexSim para encontrar errores y cuellos de botella cuando corregirlos todavía es barato.</p>
+        <ul class="feat">
+          <li class="rv"><b>01</b><div><strong>Flujos sin cruces</strong><span>Producto crudo, terminado, personal y residuos separados desde el diseño.</span></div></li>
+          <li class="rv" style="--d:.08s"><b>02</b><div><strong>Zonificación higiénica</strong><span>Áreas de alto y bajo riesgo definidas según la normativa.</span></div></li>
+          <li class="rv" style="--d:.16s"><b>03</b><div><strong>Capacidad medida, no supuesta</strong><span>Cuánto produce cada línea por turno y qué equipo la limita.</span></div></li>
+        </ul>
+        <p class="guide rv">¿Qué revisa la autoridad sanitaria en tu planta? <a href="guias/habilitacion-sanitaria-planta-alimentos.html">Lee la guía: qué pide hoy DIGESA</a></p>
+        <a class="btn btn-light rv" href="#contacto">Cotizar mi planta <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+      <figure class="stage rv" style="--d:.15s">
+        <div class="screen wide">
+          <video muted loop playsinline preload="none" data-auto poster="img/proyectos/panificadora-montaje.jpg" aria-label="Recorrido virtual renderizado de una panificadora en un edificio de cinco niveles: exterior, producción, amasado, almacenes y lavado">
+            <source src="img/proyectos/panificadora-montaje.mp4" type="video/mp4">
+          </video>
+          <span class="label"><i aria-hidden="true"></i>Recorrido virtual · Panificadora</span>
+        </div>
+        <div class="results sim">
+          <video class="mini" muted loop playsinline preload="none" data-auto poster="img/flexsim-cafe.jpg" aria-label="Simulación 3D en FlexSim de una planta de beneficio de café">
+            <source src="img/flexsim-cafe.mp4" type="video/mp4">
+          </video>
+          <div>
+            <h3>Y simulamos la producción en FlexSim</h3>
+            <dl>
+              <div><dt>376</dt><dd>jabas de 26 kg llenadas</dd></div>
+              <div><dt>4 410</dt><dd>kg de café mote a fermentación</dd></div>
+              <div><dt>180</dt><dd>minutos de operación simulados</dd></div>
+            </dl>
+            <p class="cap">Corrida de una planta de beneficio de café: recepción, despulpado, fermentación y llenado.</p>
+          </div>
+        </div>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- CIFRAS -->
-<section class="stats">
-  <div class="wrap row">
-    <div class="col rv"><b data-count="15" data-pre="+">+15</b><span class="mono">Años de trayectoria</span></div>
-    <div class="col rv" style="--d:.1s"><b data-count="500" data-pre="+">+500</b><span class="mono">Profesionales capacitados</span></div>
-    <div class="col rv" style="--d:.2s"><b data-count="24" data-suf=" h">24 h</b><span class="mono">Respuesta a tu consulta</span></div>
-    <div class="col rv" style="--d:.3s"><b data-count="6">6</b><span class="mono">Normas que implementamos</span></div>
+<!-- REGISTROS DIGITALES -->
+<section id="digital" style="padding-top:24px">
+  <div class="wrap digital">
+    <div class="device rv" role="img" aria-label="Vista de ejemplo de un registro digital de temperatura de cámaras en tablet">
+      <div class="scr" aria-hidden="true">
+        <div class="top"><div><b>Control de temperatura de cámaras</b><small>Registro BPM · turno mañana</small></div><span class="badge">Vista de ejemplo</span></div>
+        <table>
+          <thead><tr><th>Hora</th><th>Cámara</th><th>Temp.</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>07:00</td><td>Lácteos</td><td>3,2 °C</td><td><span class="st ok">Conforme</span></td></tr>
+            <tr><td>07:04</td><td>Cárnicos</td><td>1,8 °C</td><td><span class="st ok">Conforme</span></td></tr>
+            <tr><td>07:07</td><td>Congelados</td><td>−18,4 °C</td><td><span class="st ok">Conforme</span></td></tr>
+            <tr><td>11:00</td><td>Lácteos</td><td>5,6 °C</td><td><span class="st warn">Acción correctiva</span></td></tr>
+          </tbody>
+        </table>
+        <div class="foot"><span>Revisado por el jefe de planta</span><span class="sign">J. Ramírez</span></div>
+      </div>
+      <div class="note" aria-hidden="true">PDF generado al cerrar el turno</div>
+    </div>
+    <div>
+      <span class="eyebrow">Registros digitales</span>
+      <h2 class="h2" data-split>Registros que se llenan en planta, <em>no</em> en la oficina</h2>
+      <p class="lede rv">Pasamos tus formatos BPM y HACCP a tablet o celular. Cada control queda con hora, responsable y firma, listo para mostrar en una inspección.</p>
+      <ul class="ticks rv">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Firma en pantalla</b> con el dedo o con lápiz táctil.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Trazabilidad por lote:</b> cada etapa ve el lote apenas la anterior lo guarda.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>PDF para el jefe de planta</b> y para la autoridad, sin pasar nada en limpio.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Funciona en la red de tu planta,</b> aunque falle el internet.</span></li>
+      </ul>
+      <a class="tlink rv" href="servicios/transformacion-digital.html">Ver transformación digital <span aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
 
 <!-- MÉTODO -->
-<section id="metodo">
-  <div class="wrap proc">
-    <figure class="pic rc">
-      <img src="img/gestion.jpg" alt="Lista de verificación HACCP con lupa, guantes y vegetales frescos" loading="lazy">
-      <figcaption class="badge"><img src="img/isotipo.png" alt=""><span>Método Food Tracking</span></figcaption>
-    </figure>
+<section id="metodo" style="padding-top:40px">
+  <div class="wrap">
+    <div class="shead">
+      <div><span class="eyebrow">Cómo trabajamos</span><h2 class="h2" data-split>Un método <em>claro,</em> sin sorpresas</h2></div>
+      <p class="lede rv">Sabes desde el primer día qué se hará, en qué orden y qué recibes al final de cada etapa.</p>
+    </div>
+    <ol class="steps">
+      <li class="rv"><span class="n">01</span><h3>Diagnóstico</h3><p>Visita técnica, brechas frente a la norma y plan priorizado.</p></li>
+      <li class="rv" style="--d:.08s"><span class="n">02</span><h3>Diseño</h3><p>Layout 3D, flujos y programas prerrequisito a medida.</p></li>
+      <li class="rv" style="--d:.16s"><span class="n">03</span><h3>Implementación</h3><p>Documentación, capacitación del equipo y registros digitales.</p></li>
+      <li class="rv" style="--d:.24s"><span class="n">04</span><h3>Auditoría</h3><p>Simulacro interno y acompañamiento hasta la auditoría final.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- QUIÉN RESPONDE -->
+<section id="nosotros" style="padding-top:24px">
+  <div class="wrap who">
+    <div class="cred-wrap rv">
+      <div class="cred">
+        <div class="cred-top"><img src="img/isotipo.png" alt="" width="40" height="40"><span>Food Tracking Perú</span><span class="cred-chip">Ingeniero colegiado</span></div>
+        <p class="cred-k">Colegio de Ingenieros del Perú</p>
+        <p class="cred-n"><span>CIP</span>149723</p>
+        <div class="cred-foot">
+          <p class="cred-name">Ing. Willam Pari Hilasaca</p>
+          <p class="cred-role">Inocuidad alimentaria y diseño de plantas de alimentos</p>
+          <ul class="cred-tags"><li>HACCP</li><li>BPM</li><li>ISO 22000</li><li>BRCGS</li><li>Diseño 3D</li><li>FlexSim</li></ul>
+        </div>
+        <svg class="cred-art" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="44"/><path d="M4 100h192M100 4v192"/></svg>
+      </div>
+    </div>
     <div>
-      <span class="eyebrow mono">Cómo trabajamos</span>
-      <h2 style="margin-top:14px" data-split>Un método <span class="serif">claro,</span> sin sorpresas</h2>
-      <ol class="steps">
-        <li class="rv"><span class="n">01</span><div><h3>Diagnóstico</h3><p>Visita técnica, brechas frente a la norma y plan priorizado.</p></div></li>
-        <li class="rv" style="--d:.08s"><span class="n">02</span><div><h3>Diseño</h3><p>Layout 3D, flujos y programas prerrequisito a medida.</p></div></li>
-        <li class="rv" style="--d:.16s"><span class="n">03</span><div><h3>Implementación</h3><p>Documentación, capacitación del equipo y registros digitales.</p></div></li>
-        <li class="rv" style="--d:.24s"><span class="n">04</span><div><h3>Auditoría y certificación</h3><p>Simulacro interno y acompañamiento hasta la auditoría final.</p></div></li>
-      </ol>
+      <span class="eyebrow">Quién responde por tu proyecto</span>
+      <h2 class="h2" data-split>Rigor normativo, <em>mentalidad</em> de ingeniería</h2>
+      <p class="lede rv">Food Tracking Perú lo dirige el ingeniero Willam Pari Hilasaca, especialista en inocuidad alimentaria. Quien diseña tu planta conoce lo que te pedirán en la inspección y en la validación del plan HACCP, porque es el mismo equipo que te acompaña hasta la auditoría.</p>
+      <div class="stats rv">
+        <div class="col"><b data-count="15" data-pre="+">+15</b><span>años de trayectoria</span></div>
+        <div class="col"><b data-count="500" data-pre="+">+500</b><span>profesionales capacitados</span></div>
+        <div class="col"><b data-count="6">6</b><span>normas que implementamos</span></div>
+      </div>
+      <a class="btn btn-primary rv" href="#contacto">Hablemos de tu planta <span class="arr" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- NOSOTROS -->
-<section class="why" id="nosotros">
-  <div class="wrap whyg">
-    <div>
-      <span class="eyebrow mono">Por qué Food Tracking</span>
-      <h2 style="margin-top:14px" data-split>Rigor normativo, <span class="serif">mentalidad</span> de ingeniería</h2>
-      <ul class="checks">
-        <li class="rv"><i>✓</i><div><b>Inversión optimizada</b><span>Diseño industrial eficiente que reduce costos operativos.</span></div></li>
-        <li class="rv" style="--d:.1s"><i>✓</i><div><b>Calidad asegurada, riesgo minimizado</b><span>Protocolos robustos frente a riesgos sanitarios y legales.</span></div></li>
-        <li class="rv" style="--d:.2s"><i>✓</i><div><b>De la ingeniería a la auditoría</b><span>Un solo equipo, sin traspasos entre proveedores.</span></div></li>
-      </ul>
-      <a class="btn btn-dark" href="#contacto">Hablemos de tu planta <span class="arr">→</span></a>
-    </div>
-    <div class="duo rv">
-      <img class="a" src="img/sello.jpg" alt="Sello de aprobación sobre documentos oficiales" loading="lazy">
-      <img class="b" src="img/capacitacion.jpg" alt="Capacitación de personal con instructor" loading="lazy">
-      <div class="tag">+500 capacitados</div>
-    </div>
+<!-- GUÍA -->
+<section class="res" aria-label="Guía gratuita">
+  <div class="wrap">
+    <a class="resource rv" href="guias/habilitacion-sanitaria-planta-alimentos.html">
+      <div><span class="k">Guía gratuita</span><h3>Habilitación sanitaria de planta: qué pide hoy DIGESA</h3><p>Lo vigente (validación técnica oficial del plan HACCP o certificado PGH, e inspección sin aviso) y los requisitos de infraestructura del DS 007-98-SA, artículo por artículo.</p></div>
+      <span class="go" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="background:#fff;border-top:1px solid var(--line)">
-  <div class="wrap">
-    <div class="head"><div><span class="eyebrow mono">Preguntas frecuentes</span><h2 style="margin-top:14px" data-split>Todo lo que necesitas saber <span class="serif">antes</span> de empezar</h2></div></div>
+<section id="faq" style="padding-top:24px">
+  <div class="wrap faqg">
+    <div class="sticky">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="h2" data-split>Lo que conviene saber <em>antes</em> de empezar</h2>
+      <p class="rv">¿Tu pregunta no está aquí? Escríbenos por <a class="tlink" href="https://wa.me/51952255734" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    </div>
     <div class="faq"><details class="rv" style="--d:0.00s"><summary>&#191;Cu&#225;nto tiempo tarda la implementaci&#243;n de un sistema HACCP?</summary><p>Depende del tama&#241;o y complejidad de la empresa. En promedio, una implementaci&#243;n completa de HACCP (documentaci&#243;n, capacitaci&#243;n y validaci&#243;n) toma entre 6 y 12 semanas. Si ya cuentas con documentaci&#243;n previa, el proceso puede ser m&#225;s r&#225;pido. El diagn&#243;stico inicial gratuito nos permite darte un cronograma realista desde el primer d&#237;a.</p></details><details class="rv" style="--d:0.04s"><summary>&#191;Cu&#225;nto cuesta implementar HACCP o ISO 22000?</summary><p>El costo depende del tama&#241;o de la empresa, el n&#250;mero de productos y el nivel de documentaci&#243;n previa. Para darte un precio exacto necesitamos hacer el diagn&#243;stico inicial (gratuito) primero. Lo que s&#237; podemos decirte es que implementar HACCP cuesta significativamente menos que una auditor&#237;a fallida, multas sanitarias o la p&#233;rdida de un contrato con una cadena de supermercados por incumplimiento normativo.</p></details><details class="rv" style="--d:0.08s"><summary>&#191;Trabajan fuera de Lima?</summary><p>S&#237;. Atendemos empresas en todo el Per&#250;: Lima, Callao y provincias. Para proyectos fuera de Lima coordinamos visitas t&#233;cnicas seg&#250;n el cronograma del proyecto y complementamos el trabajo presencial con reuniones virtuales para optimizar tiempos y costos de desplazamiento.</p></details><details class="rv" style="--d:0.12s"><summary>&#191;Qu&#233; diferencia a Food Tracking Per&#250; de otras consultor&#237;as?</summary><p>Integramos tres capacidades en un solo equipo: (1) implementación de sistemas de gestión de inocuidad listos para auditoría, (2) transformación digital del sistema de calidad, y (3) diseño 3D y simulación de plantas alimentarias antes de construir. Así, quien diseña tu planta conoce los requisitos que te pedirán en la auditoría y en la validación del Plan HACCP.</p></details><details class="rv" style="--d:0.16s"><summary>&#191;Necesito HACCP si mi empresa es peque&#241;a o mediana?</summary><p>S&#237;. Seg&#250;n el Codex Alimentarius y la normativa peruana (DS 007-98-SA y sus modificatorias), las empresas que fabrican alimentos deben implementar sistemas de control de peligros basados en HACCP, independientemente de su tama&#241;o. Adem&#225;s, si vendes a supermercados o grandes cadenas, el HACCP es pr&#225;cticamente un requisito obligatorio. Adaptamos el sistema al tama&#241;o y complejidad real de tu operaci&#243;n.</p></details><details class="rv" style="--d:0.20s"><summary>&#191;Trabajan con empresas que reci&#233;n est&#225;n empezando?</summary><p>S&#237;. Trabajamos tanto con empresas en etapa de dise&#241;o de planta (antes de construir) como con empresas ya operativas que necesitan regularizar o certificar su sistema. Para startups del sector alimentos, la ventaja de trabajar con nosotros desde el inicio es que el dise&#241;o de la planta ya sale HACCP-ready, evitando costosas modificaciones despu&#233;s de la construcci&#243;n.</p></details><details class="rv" style="--d:0.24s"><summary>&#191;Qu&#233; incluye el diagn&#243;stico gratuito?</summary><p>El diagn&#243;stico inicial sin costo incluye una revisi&#243;n del estado actual de tu sistema de gesti&#243;n de inocuidad, identificaci&#243;n de brechas respecto a la normativa aplicable, y una propuesta de ruta para alcanzar tus objetivos de certificaci&#243;n o regularizaci&#243;n. Es una sesi&#243;n de 30 a 45 minutos por videollamada o presencial en Lima.</p></details><details class="rv" style="--d:0.28s"><summary>¿Para qué sirve simular mi planta antes de construirla?</summary><p>Con un modelo de simulación (usamos FlexSim) vemos cómo se comportará la producción real: cuánto produce cada línea por turno, dónde se acumula producto en espera y qué equipo limita la capacidad. Así dimensionas equipos, áreas y personal con datos antes de invertir, y no después de construir.</p></details></div>
   </div>
 </section>
 
 <!-- CONTACTO -->
-<section class="contact" id="contacto">
-  <div class="bg" data-speed="0.1"></div>
-  <div class="wrap cgrid">
-    <div>
-      <span class="eyebrow mono" style="color:var(--amber)">Contacto</span>
-      <h2 style="margin-top:14px" data-split>¿Listo para elevar tus <span class="serif">estándares?</span></h2>
-      <p class="lead rv">Cuéntanos de tu planta. Te respondemos en menos de 24 horas hábiles con una propuesta de diagnóstico.</p>
-      <ul class="reach rv">
-        <li><a href="tel:+51952255734"><span class="ic">📞</span>952 255 734</a></li>
-        <li><a href="https://wa.me/51952255734" target="_blank" rel="noopener"><span class="ic">💬</span>Escribir por WhatsApp</a></li>
-        <li><a href="mailto:wparih@gmail.com"><span class="ic">✉️</span>wparih@gmail.com</a></li>
-        <li><a href="#"><span class="ic">📍</span>Lima, Perú</a></li>
-      </ul>
+<section class="contact" id="contacto" style="padding-top:24px">
+  <div class="wrap">
+    <div class="panel">
+      <div>
+        <span class="eyebrow">Contacto</span>
+        <h2 class="h2" data-split>Cuéntanos de tu <em>planta</em></h2>
+        <p class="lede rv">Te respondemos en menos de 24 horas hábiles con una propuesta de diagnóstico.</p>
+        <ul class="reach rv">
+          <li><a href="tel:+51952255734"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>952 255 734</a></li>
+          <li><a href="https://wa.me/51952255734" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-4.6A8.5 8.5 0 1 1 7.6 19.3z"/></svg>Escribir por WhatsApp</a></li>
+          <li><a href="mailto:wparih@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>wparih@gmail.com</a></li>
+          <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lima, Perú · atendemos todo el país</span></li>
+        </ul>
+      </div>
+      <form id="form" class="rv" novalidate>
+        <h3>Solicita tu diagnóstico</h3>
+        <div class="row"><label>Nombre<input name="nombre" required autocomplete="name"></label><label>Empresa<input name="empresa" autocomplete="organization"></label></div>
+        <div class="row"><label>Correo<input name="correo" type="email" required autocomplete="email"></label><label>Teléfono / WhatsApp<input name="tel" type="tel" autocomplete="tel"></label></div>
+        <label>¿Qué necesitas?<select name="servicio"><option>Implementación HACCP / ISO 22000 / BRCGS</option><option>Diseño o remodelación de planta (3D)</option><option>Trámites DIGESA: PGH o validación HACCP</option><option>Capacitación in-company</option><option>Auditoría / diagnóstico</option><option>Registros digitales</option><option>Otro</option></select></label>
+        <label>Mensaje<textarea name="mensaje" rows="3"></textarea></label>
+        <button class="btn btn-primary" type="submit">Enviar por WhatsApp <span class="arr" aria-hidden="true">→</span></button>
+        <small>Se abrirá WhatsApp con tu consulta escrita. Usaremos estos datos solo para responderte. Más información en la <a href="privacidad.html">política de privacidad</a>.</small>
+        <div id="ok" role="status">Abriendo WhatsApp…</div>
+      </form>
     </div>
-    <form id="form" class="rv" novalidate>
-      <h3>Solicita tu diagnóstico</h3>
-      <div class="row"><label>Nombre<input name="nombre" required autocomplete="name"></label><label>Empresa<input name="empresa" autocomplete="organization"></label></div>
-      <div class="row"><label>Correo<input name="correo" type="email" required autocomplete="email"></label><label>Teléfono / WhatsApp<input name="tel" type="tel" autocomplete="tel"></label></div>
-      <label>¿Qué necesitas?<select name="servicio"><option>Implementación HACCP / ISO 22000 / BRCGS</option><option>Diseño o remodelación de planta (3D/BIM)</option><option>Trámites DIGESA / SENASA</option><option>Capacitación in-company</option><option>Auditoría / diagnóstico</option><option>Otro</option></select></label>
-      <label>Mensaje<textarea name="mensaje" rows="3"></textarea></label>
-      <button class="btn btn-primary" type="submit" style="justify-content:center">Enviar por WhatsApp <span class="arr">→</span></button>
-      <small>Se abrirá WhatsApp con tu consulta prellenada. Usaremos estos datos solo para responder tu solicitud. Más información en nuestra <a href="privacidad.html" style="color:var(--cyan)">política de privacidad</a>.</small>
-      <div id="ok" role="status">Abriendo WhatsApp…</div>
-    </form>
   </div>
 </section>
 </main>
@@ -324,19 +579,30 @@
 <footer class="site">
   <div class="wrap">
     <div class="fgrid">
-      <div><div class="fbrand"><img src="img/isotipo.png" alt=""><b>FOOD TRACKING</b></div><p>Seguridad alimentaria, regulación, transformación digital e ingeniería de plantas para la industria de alimentos.</p><p style="margin-top:10px"><strong style="color:#fff">Ing. Willam Pari Hilasaca</strong> · CIP N.° 149723</p></div>
-      <div><h4>Servicios</h4><ul><li><a href="servicios/gestion-integral.html">Sistemas de gestión integral</a></li><li><a href="servicios/regulacion.html">Regulación y compliance</a></li><li><a href="servicios/transformacion-digital.html">Transformación digital</a></li><li><a href="servicios/auditoria.html">Auditoría y capacitación</a></li><li><a href="servicios/ingenieria-3d.html">Ingeniería inmersiva 3D</a></li></ul></div>
-      <div><h4>Contacto</h4><ul><li><a href="https://wa.me/51952255734" target="_blank" rel="noopener">WhatsApp 952 255 734</a></li><li><a href="mailto:wparih@gmail.com">wparih@gmail.com</a></li><li>Lima, Perú</li><li><a href="https://facebook.com/foodtrackingperu" target="_blank" rel="noopener">Facebook</a> · <a href="https://instagram.com/foodtrackingperu" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/company/foodtrackingperu/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div><div class="fbrand"><img src="img/isotipo.png" alt=""><b>FOOD TRACKING</b></div><p>Inocuidad alimentaria, regulación sanitaria, registros digitales e ingeniería de plantas para la industria de alimentos del Perú.</p><p style="margin-top:12px"><strong style="color:#fff">Ing. Willam Pari Hilasaca</strong> · CIP N.° 149723</p></div>
+      <div><h4>Servicios</h4><ul><li><a href="servicios/ingenieria-3d.html">Ingeniería 3D</a></li><li><a href="servicios/regulacion.html">Regulación sanitaria</a></li><li><a href="servicios/gestion-integral.html">Sistemas de gestión</a></li><li><a href="servicios/transformacion-digital.html">Transformación digital</a></li><li><a href="servicios/auditoria.html">Auditoría y capacitación</a></li></ul></div>
+      <div><h4>Recursos</h4><ul><li><a href="guias/habilitacion-sanitaria-planta-alimentos.html">Guía: qué pide hoy DIGESA</a></li><li><a href="#faq">Preguntas frecuentes</a></li><li><a href="privacidad.html">Política de privacidad</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="https://wa.me/51952255734" target="_blank" rel="noopener">WhatsApp 952 255 734</a></li><li><a href="mailto:wparih@gmail.com">wparih@gmail.com</a></li><li><a href="https://facebook.com/foodtrackingperu" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://instagram.com/foodtrackingperu" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/foodtrackingperu/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
     </div>
-    <div class="legal"><span>© <span id="y">2026</span> Food Tracking Perú. Todos los derechos reservados.</span><span><a href="privacidad.html">Política de privacidad</a></span></div>
+    <div class="legal"><span>© <span id="y">2026</span> Food Tracking Perú. Todos los derechos reservados.</span><span>Lima, Perú</span></div>
   </div>
 </footer>
 
 <a class="wa" href="https://wa.me/51952255734" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg><span>Hablemos</span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg><span>Hablemos</span>
 </a>
 
+<dialog class="lb" id="lb" aria-label="Proyecto ampliado">
+  <button type="button" class="lb-x" aria-label="Cerrar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button type="button" class="lb-nav lb-prev" aria-label="Proyecto anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button type="button" class="lb-nav lb-next" aria-label="Proyecto siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+  <figure><div class="lb-m"></div><figcaption></figcaption></figure>
+</dialog>
+<div class="cur" aria-hidden="true"><span>Ver</span></div>
+
 <script src="js/main.js?v=3"></script>
+<script src="js/v2.js?v=3" defer></script>
 <script src="js/globos.js?v=3" defer></script>
+<script>if(matchMedia('(prefers-reduced-motion:reduce)').matches)document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});</script>
 </body>
 </html>
