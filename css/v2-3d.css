@@ -182,3 +182,5 @@
   .rl .c{transition:none}
   :is(a,button):hover>.rl .c{transform:none}
 }
+/* Titular de la portada: más largo, se acota para no chocar con el menú */
+.step[data-step="0"] h1{font-size:clamp(34px,4.6vw,62px) !important;line-height:1.04 !important}
