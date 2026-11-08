@@ -26,8 +26,17 @@
 .cine-anim .card:hover .media>img,.cine-anim .media:focus-visible>img{scale:1.05}
 .cine-anim .media{will-change:clip-path}
 
+/* palabras del titular de la pausa (las crea js/v2-cine.js) */
+.cw{display:inline-block;will-change:transform,opacity}
+
+/* Ingeniería: el video necesita margen para moverse dentro del marco */
+.cine-anim #ingenieria .screen>video{will-change:transform}
+
 @media (max-width:767px){
   .cine{padding:48px 0}
   .cine-anim .cine{height:190vh}
+  /* en celular vertical el video horizontal se recortaba demasiado: el marco final ocupa todo el ancho
+     y 72% del alto, con el fondo navy arriba y abajo */
+  .cine-anim .cine-frame{height:72vh;height:72svh}
   .cine-copy p{font-size:15px}
 }
