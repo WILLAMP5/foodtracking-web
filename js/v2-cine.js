@@ -2,7 +2,7 @@
    1) Pausa cinemática (#cine): el recorrido de la panificadora pasa de tarjeta a pantalla completa
       y el titular entra palabra por palabra.
    2) Proyectos: cada imagen se abre al entrar y su contenido se desplaza con parallax.
-   3) Ingeniería: el video se desplaza dentro de su marco y la tarjeta de resultados flota a otra velocidad.
+   3) Ingeniería: el video se desplaza dentro de su marco (parallax).
    4) Registros digitales: las filas de la tablet se "llenan" una tras otra.
    No toca la maqueta 3D del inicio ni los paneles de servicios. Con movimiento reducido, sin GSAP
    o sin JS no se anima nada: todo queda en su estado final y visible. */
@@ -54,7 +54,8 @@
         .fromTo('.cine-frame video', { scale: 1.28 }, { scale: 1, duration: 1 }, 0)
         .fromTo('.cine-copy .eyebrow', { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.18 }, 0.58)
         .fromTo(cineWords, { autoAlpha: 0, yPercent: 60, rotate: 2 }, { autoAlpha: 1, yPercent: 0, rotate: 0, duration: 0.22, stagger: 0.025 }, 0.62)
-        .fromTo('.cine-copy p', { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.2 }, 0.84);
+        .fromTo('.cine-copy p', { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.2 }, 0.84)
+        .to({}, { duration: 0.3 }); /* pausa final: marco abierto y texto completo antes de soltar la sección */
     }
 
     /* 2) proyectos: la tarjeta se abre suavemente al entrar y la imagen se desplaza dentro */
@@ -74,7 +75,8 @@
     if (stage) {
       var st = { trigger: stage, start: 'top bottom', end: 'bottom top', scrub: true };
       gsap.fromTo('#ingenieria .screen > video', { yPercent: -6, scale: 1.14 }, { yPercent: 6, scale: 1.14, ease: 'none', scrollTrigger: st });
-      if (!narrow) gsap.fromTo('#ingenieria .results', { y: 0 }, { y: -80, ease: 'none', scrollTrigger: st }); /* solo sube: nunca tapa más video que el diseño original */
+      /* la tarjeta de resultados no se mueve: va debajo del video, pegada al borde del panel, y cualquier
+         desplazamiento la tapaba o la recortaba en anchos de tablet */
     }
 
     /* 4) registros digitales: las filas aparecen como si se llenaran en planta */
