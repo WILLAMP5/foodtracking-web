@@ -14,3 +14,7 @@ h2 .serif{color:var(--navy2)}
 .phero .btn-primary,.cta-band .btn-primary{background:#fff;color:#0d1b2a;box-shadow:0 12px 30px -16px rgba(0,0,0,.7)}
 .phero .btn-primary:hover,.cta-band .btn-primary:hover{background:#ecebe4}
 .phero .btn-primary .arr,.cta-band .btn-primary .arr{background:#e4ecf8;color:#0d1b2a}
+/* campos y WhatsApp con los mismos valores que la portada (contraste: borde 3.6:1, texto blanco sobre verde 5.99:1) */
+form input,form select,form textarea{border-color:#76818e}
+.wa{background:#1d7148}
+.wa:hover{background:#185f3c}

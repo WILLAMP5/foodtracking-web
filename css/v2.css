@@ -1,7 +1,7 @@
 /* Food Tracking Perú · portada v2 (vitrina premium) */
 :root{
   --paper:#f5f4ef;--paper-2:#ecebe4;--white:#fff;
-  --ink:#0d1b2a;--ink-2:#2c3847;--muted:#5d6977;--line:#dedbd2;--line-2:#cbc7bc;
+  --ink:#0d1b2a;--ink-2:#2c3847;--muted:#5d6977;--line:#dedbd2;--line-2:#cbc7bc;--field:#76818e;--brand:#a3192b;
   --navy:#123456;--navy-2:#0c2440;--navy-3:#081a2f;
   --accent:#2a68c8;--accent-soft:#e4ecf8;--warn:#a5590b;--warn-soft:#fbefdf;--ok:#1d7148;--ok-soft:#e2f2e9;
   --on-dark:#eef2f7;--on-dark-2:#a9b7c8;--line-dark:rgba(255,255,255,.12);
@@ -213,7 +213,7 @@ section.res{padding:0 0 120px}
 #form h3{font-size:22px;letter-spacing:-.02em;color:var(--ink)}
 #form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 #form label{display:grid;gap:7px;font-size:13.5px;font-weight:600;color:var(--ink)}
-#form input,#form select,#form textarea{width:100%;font:400 15.5px/1.4 var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .2s,background .2s,box-shadow .2s}
+#form input,#form select,#form textarea{width:100%;font:400 15.5px/1.4 var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--field);border-radius:10px;padding:12px 14px;transition:border-color .2s,background .2s,box-shadow .2s}
 #form input:focus,#form select:focus,#form textarea:focus{outline:none;background:#fff;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
 #form input:user-invalid{border-color:#b4372b}
 #form .btn{justify-content:center;width:100%;padding:16px 22px}
