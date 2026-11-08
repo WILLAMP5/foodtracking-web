@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="css/v2.css?v=2">
 <link rel="stylesheet" href="css/v2-3d.css?v=4">
 <link rel="stylesheet" href="css/v2-sec.css?v=1">
+<link rel="stylesheet" href="css/v2-cine.css?v=2">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -300,6 +301,22 @@
         </div>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- PAUSA CINEMÁTICA: el recorrido se abre a pantalla completa con el scroll (js/v2-cine.js) -->
+<section id="cine" class="cine" aria-label="Recorrido virtual de una panificadora">
+  <div class="cine-stick">
+    <div class="cine-frame">
+      <video muted loop playsinline preload="none" data-auto poster="img/proyectos/panificadora-recorrido.jpg" aria-label="Recorrido virtual renderizado del interior de una panificadora en un edificio de cinco niveles">
+        <source src="img/proyectos/panificadora-recorrido.mp4" type="video/mp4">
+      </video>
+      <div class="cine-copy">
+        <span class="eyebrow">Recorrido virtual · Panificadora</span>
+        <h2>Camina por tu planta <em>antes</em> de levantar una pared.</h2>
+        <p>Revisamos flujos, accesos y equipos sobre el modelo 3D, cuando cambiar algo cuesta un clic y no una obra.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -619,6 +636,9 @@
 <script src="js/main.js?v=3"></script>
 <script src="js/v2.js?v=3" defer></script>
 <script src="js/globos.js?v=3" defer></script>
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/v2-cine.js?v=2" defer></script>
 <script>if(matchMedia('(prefers-reduced-motion:reduce)').matches)document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});</script>
 </body>
 </html>
