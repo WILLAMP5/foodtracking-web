@@ -23,7 +23,7 @@ def must(s, a, b, count=1):
 
 # 1) quitar tracker y marcar noindex
 html, n = re.subn(r'<script>function loadScript\(a\).*?</script>\s*', '', html, flags=re.S)
-assert n == 1, 'tracker'
+assert n in (0, 1), 'tracker'  # la copia v3 ya no trae el tracker
 html = must(html, '<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex">') if '<meta charset="utf-8">' in html else html.replace('<head>', '<head>\n<meta name="robots" content="noindex">', 1)
 
 # 2) CSS en línea
@@ -31,7 +31,7 @@ def css_inline(m):
     href = m.group(1).split('?')[0]
     return '<style>/* %s */\n%s\n</style>' % (href, rd(href))
 html, n = re.subn(r'<link rel="stylesheet" href="(css/[^"]+)">', css_inline, html)
-assert n == 4, ('css', n)
+assert n == 5, ('css', n)  # + css/v3-movil.css
 
 # 3) videos: registro único -> Blob URLs
 vids = sorted(set(re.findall(r'(img/[\w/.-]+\.mp4)', html)))
@@ -78,7 +78,7 @@ def script_inline(m):
         pre = '<script>/* js/planta3d.js (maqueta 3D) */\n%s\n</script>\n' % js('js/planta3d.js')
     return '%s<script>/* %s */\n%s\n</script>' % (pre, p, js(p))
 html, n = re.subn(r'<script src="(js/[^"]+)"(?: defer)?></script>', script_inline, html)
-assert n == 6, ('js', n)
+assert n == 7, ('js', n)  # + js/v3-movil.js
 
 # 7) no deben quedar rutas locales
 left = re.findall(r'(?:src|href|poster|data-full)="(?!data:|https?:|#|mailto:|tel:)([^"]+)"', html)

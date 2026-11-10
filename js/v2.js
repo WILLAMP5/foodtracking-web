@@ -71,7 +71,7 @@
     });
 
     const offset = pp => {
-      if (innerWidth < 761) return { x: 0, y: -H * .17 };
+      if (innerWidth < 761) return { x: 0, y: -H * .21 };
       if (innerWidth < 1081) return { x: W * .1, y: -H * .04 };
       return { x: W * (.18 + .03 * smooth(.15, .3, pp)), y: 0 };
     };
