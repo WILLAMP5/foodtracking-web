@@ -52,8 +52,10 @@ if(formEl)formEl.addEventListener('submit',e=>{
   e.preventDefault();const f=e.target;
   if(!f.nombre.value.trim()||!f.correo.value||!f.correo.validity.valid){f.reportValidity();(f.nombre.value.trim()?f.correo:f.nombre).focus();return;}
   const t=`Hola, soy ${f.nombre.value}${f.empresa.value?' de '+f.empresa.value:''}.\nNecesito: ${f.servicio.value}.\n${f.mensaje.value}\nContacto: ${f.correo.value} ${f.tel.value}`;
-  document.getElementById('ok').style.display='block';
-  window.open('https://wa.me/51952255734?text='+encodeURIComponent(t),'_blank','noopener');});
+  const ok=document.getElementById('ok');ok.style.display='block';
+  window.open('https://wa.me/51952255734?text='+encodeURIComponent(t),'_blank','noopener');
+  f.reset();// deja el formulario vacío para la siguiente consulta
+  setTimeout(()=>{ok.style.display='none';},8000);});
 document.getElementById('y').textContent=new Date().getFullYear();
 const pre={gestion:0,'ingenieria-3d':1,regulacion:2,digital:5,capacitacion:3};
 const q=new URLSearchParams(location.search).get('s');if(formEl&&q in pre)formEl.servicio.selectedIndex=pre[q];
