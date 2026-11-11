@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/v2.css?v=2">
+<link rel="stylesheet" href="css/v2.css?v=3">
 <link rel="stylesheet" href="css/v2-3d.css?v=4">
 <link rel="stylesheet" href="css/v2-sec.css?v=1">
 <link rel="stylesheet" href="css/v2-cine.css?v=5">
@@ -144,7 +144,6 @@
     }
   ]
 }</script>
-<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"931da99e850e4b4b1ff02c28d5899ec3"})});</script>
 </head>
 <body>
 <div id="prog"></div>
@@ -601,8 +600,9 @@
         <div class="row"><label>Correo<input name="correo" type="email" required autocomplete="email"></label><label>Teléfono / WhatsApp<input name="tel" type="tel" autocomplete="tel"></label></div>
         <label>¿Qué necesitas?<select name="servicio"><option>Implementación HACCP / ISO 22000 / BRCGS</option><option>Diseño o remodelación de planta (3D)</option><option>Trámites DIGESA: PGH o validación HACCP</option><option>Capacitación in-company</option><option>Auditoría / diagnóstico</option><option>Registros digitales</option><option>Otro</option></select></label>
         <label>Mensaje<textarea name="mensaje" rows="3"></textarea></label>
+        <label class="consent"><input type="checkbox" name="acepto" required><span>Acepto que Food Tracking Perú use estos datos para responder mi consulta, según la <a href="privacidad.html">política de privacidad</a>.</span></label>
         <button class="btn btn-primary" type="submit">Enviar por WhatsApp <span class="arr" aria-hidden="true">→</span></button>
-        <small>Se abrirá WhatsApp con tu consulta escrita. Usaremos estos datos solo para responderte. Más información en la <a href="privacidad.html">política de privacidad</a>.</small>
+        <small>Se abrirá WhatsApp con tu consulta ya escrita; este sitio no guarda lo que escribes en el formulario.</small>
         <div id="ok" role="status">Abriendo WhatsApp…</div>
       </form>
     </div>
@@ -615,7 +615,7 @@
     <div class="fgrid">
       <div><div class="fbrand"><img src="img/isotipo.png" alt=""><b>FOOD TRACKING</b></div><p>Inocuidad alimentaria, regulación sanitaria, registros digitales e ingeniería de plantas para la industria de alimentos del Perú.</p><p style="margin-top:12px"><strong style="color:#fff">Ing. Willam Pari Hilasaca</strong> · CIP N.° 149723</p></div>
       <div><h4>Servicios</h4><ul><li><a href="servicios/ingenieria-3d.html">Ingeniería 3D</a></li><li><a href="servicios/regulacion.html">Regulación sanitaria</a></li><li><a href="servicios/gestion-integral.html">Sistemas de gestión</a></li><li><a href="servicios/transformacion-digital.html">Transformación digital</a></li><li><a href="servicios/auditoria.html">Auditoría y capacitación</a></li></ul></div>
-      <div><h4>Recursos</h4><ul><li><a href="guias/habilitacion-sanitaria-planta-alimentos.html">Guía: qué pide hoy DIGESA</a></li><li><a href="#faq">Preguntas frecuentes</a></li><li><a href="privacidad.html">Política de privacidad</a></li></ul></div>
+      <div><h4>Recursos</h4><ul><li><a href="guias/habilitacion-sanitaria-planta-alimentos.html">Guía: qué pide hoy DIGESA</a></li><li><a href="#faq">Preguntas frecuentes</a></li><li><a href="guias/registro-sanitario-digesa-alimentos.html">Guía: registro sanitario DIGESA</a></li><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="terminos.html">Aviso legal y términos</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="https://wa.me/51952255734" target="_blank" rel="noopener">WhatsApp 952 255 734</a></li><li><a href="mailto:wparih@gmail.com">wparih@gmail.com</a></li><li><a href="https://facebook.com/foodtrackingperu" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://instagram.com/foodtrackingperu" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/foodtrackingperu/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
     </div>
     <div class="legal"><span>© <span id="y">2026</span> Food Tracking Perú. Todos los derechos reservados.</span><span>Lima, Perú</span></div>
@@ -634,7 +634,8 @@
 </dialog>
 <div class="cur" aria-hidden="true"><span>Ver</span></div>
 
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=5"></script>
+<script src="js/consent.js?v=1" defer></script>
 <script src="js/v2.js?v=4" defer></script>
 <script src="js/globos.js?v=3" defer></script>
 <script src="js/vendor/gsap.min.js" defer></script>
