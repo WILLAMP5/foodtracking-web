@@ -12,6 +12,7 @@
 ## Guías
 - Habilitación sanitaria de planta: qué pide hoy DIGESA. La habilitación de fábrica ya no es el trámite vigente; hoy se pide la Validación Técnica Oficial del Plan HACCP o el Certificado PGH, y hay inspecciones sanitarias inopinadas. Incluye los requisitos de infraestructura del DS 007-98-SA, artículo por artículo. https://foodtrackingperu.com/guias/habilitacion-sanitaria-planta-alimentos.html
 - Registro sanitario DIGESA de alimentos: requisitos, costo y pasos. Qué alimentos lo necesitan, qué contiene el expediente, cómo se tramita en la VUCE, plazo de 7 días hábiles según DIGESA, vigencia de 5 años y reinscripción, con artículos del DS 007-98-SA. https://foodtrackingperu.com/guias/registro-sanitario-digesa-alimentos.html
+- Plan HACCP y validación técnica oficial DIGESA: qué es y cómo se obtiene. Los 7 principios y 12 pasos, los 14 puntos que contiene el plan, el trámite de validación ante DIGESA con artículos de la RM 449-2006/MINSA, y qué cambió en costo y vigencia. https://foodtrackingperu.com/guias/plan-haccp-validacion-tecnica-oficial-digesa.html
 
 ## Dónde trabajamos
 Lima, Callao y provincias de todo el Perú. Para proyectos fuera de Lima se coordinan visitas técnicas y reuniones virtuales.

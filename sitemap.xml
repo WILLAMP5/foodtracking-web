@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://foodtrackingperu.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://foodtrackingperu.com/servicios/gestion-integral.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://foodtrackingperu.com/servicios/regulacion.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://foodtrackingperu.com/servicios/regulacion.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://foodtrackingperu.com/servicios/transformacion-digital.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://foodtrackingperu.com/servicios/auditoria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://foodtrackingperu.com/servicios/ingenieria-3d.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-03</lastmod></url>
@@ -10,4 +10,5 @@
   <url><loc>https://foodtrackingperu.com/terminos.html</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://foodtrackingperu.com/guias/habilitacion-sanitaria-planta-alimentos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://foodtrackingperu.com/guias/registro-sanitario-digesa-alimentos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://foodtrackingperu.com/guias/plan-haccp-validacion-tecnica-oficial-digesa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-11-11</lastmod></url>
 </urlset>
