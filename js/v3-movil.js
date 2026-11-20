@@ -20,7 +20,7 @@
 
   /* ---------- menú a pantalla completa ---------- */
   function buildMenu() {
-    const items = [['Proyectos', '#proyectos'], ['Servicios', '#servicios'], ['Simulación', '#ingenieria'], ['Registros', '#digital'], ['Nosotros', '#nosotros'], ['Contacto', '#contacto']];
+    const items = [['Proyectos', '#proyectos'], ['Servicios', '#servicios'], ['Guías', 'guias/index.html'], ['Simulación', '#ingenieria'], ['Registros', '#digital'], ['Nosotros', '#nosotros'], ['Contacto', '#contacto']];
     mnav = document.createElement('div');
     mnav.className = 'v3-mnav'; mnav.id = 'mnav';
     mnav.setAttribute('role', 'dialog'); mnav.setAttribute('aria-modal', 'true'); mnav.setAttribute('aria-label', 'Menú'); mnav.setAttribute('aria-hidden', 'true');

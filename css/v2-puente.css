@@ -18,3 +18,5 @@ h2 .serif{color:var(--navy2)}
 form input,form select,form textarea{border-color:#76818e}
 .wa{background:#1d7148}
 .wa:hover{background:#185f3c}
+/* con "Guías" el menú tiene 7 enlaces: que ningún texto se parta en dos líneas */
+#menu a{white-space:nowrap}
