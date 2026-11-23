@@ -4,6 +4,7 @@
 
 ## Servicios
 - Sistemas de gestión integral: implementación de HACCP, BPM/PGH, ISO 22000, BRCGS, IFS, FSSC 22000 y SQF, con documentación lista para auditoría. https://foodtrackingperu.com/servicios/gestion-integral.html
+- Diseño de plantas de alimentos y agroindustriales: del proceso al plano, con diagrama de flujo, equipos y áreas, layout sanitario, planos con cotas y memoria descriptiva, para plantas nuevas, ampliaciones o adecuación de locales. https://foodtrackingperu.com/servicios/diseno-plantas-alimentos-agroindustriales.html
 - Ingeniería inmersiva 3D: diseño 3D de plantas alimentarias HACCP-ready, simulación del proceso con FlexSim (capacidad, colas, cuellos de botella) y documentación para la validación del Plan HACCP o el certificado PGH. https://foodtrackingperu.com/servicios/ingenieria-3d.html
 - Regulación y compliance: registro sanitario, validación técnica oficial del Plan HACCP, certificado de Principios Generales de Higiene (PGH) y certificaciones de exportación ante DIGESA y SENASA. https://foodtrackingperu.com/servicios/regulacion.html
 - Transformación digital: registros BPM y HACCP del papel a la nube, con firmas, versiones y acceso desde cualquier dispositivo. https://foodtrackingperu.com/servicios/transformacion-digital.html
