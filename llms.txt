@@ -1,35 +1,39 @@
 # Food Tracking Perú
 
-> Consultoría de inocuidad alimentaria en Lima, con atención en todo el Perú: implementación de HACCP, BPM, ISO 22000 y BRCGS, diseño 3D y simulación de plantas de alimentos antes de construir, y digitalización de registros de calidad. Dirigida por el Ing. Willam Pari Hilasaca (CIP N.° 149723).
+> Consultoría de inocuidad alimentaria en Lima, con atención en todo el Perú: diseño de plantas de alimentos y agroindustriales, diseño 3D y simulación de plantas antes de construir, implementación de HACCP, BPM, ISO 22000 y BRCGS, trámites ante DIGESA y digitalización de registros de calidad. Dirigida por el Ing. Willam Pari Hilasaca (CIP N.° 149723).
+
+Atendemos Lima, Callao y provincias de todo el Perú. Para proyectos fuera de Lima se coordinan visitas técnicas y reuniones virtuales. El primer paso es un diagnóstico inicial gratuito de 30 a 45 minutos, por videollamada o presencial en Lima; el costo de cada proyecto se define después de ese diagnóstico.
+
+Marco normativo que aplicamos: DL 1062 (Ley de Inocuidad de los Alimentos), DS 007-98-SA, RM 495-2008 (BPM) y NTS 071 MINSA/DIGESA, además de los estándares GFSI para empresas exportadoras.
 
 ## Servicios
-- Sistemas de gestión integral: implementación de HACCP, BPM/PGH, ISO 22000, BRCGS, IFS, FSSC 22000 y SQF, con documentación lista para auditoría. https://foodtrackingperu.com/servicios/gestion-integral.html
-- Diseño de plantas de alimentos y agroindustriales: del proceso al plano, con diagrama de flujo, equipos y áreas, layout sanitario, planos con cotas y memoria descriptiva, para plantas nuevas, ampliaciones o adecuación de locales. https://foodtrackingperu.com/servicios/diseno-plantas-alimentos-agroindustriales.html
-- Ingeniería inmersiva 3D: diseño 3D de plantas alimentarias HACCP-ready, simulación del proceso con FlexSim (capacidad, colas, cuellos de botella) y documentación para la validación del Plan HACCP o el certificado PGH. https://foodtrackingperu.com/servicios/ingenieria-3d.html
-- Regulación y compliance: registro sanitario, validación técnica oficial del Plan HACCP, certificado de Principios Generales de Higiene (PGH) y certificaciones de exportación ante DIGESA y SENASA. https://foodtrackingperu.com/servicios/regulacion.html
-- Transformación digital: registros BPM y HACCP del papel a la nube, con firmas, versiones y acceso desde cualquier dispositivo. https://foodtrackingperu.com/servicios/transformacion-digital.html
-- Auditoría y capacitación: diagnóstico GAP, pre-auditorías y capacitación in-company en BPM y HACCP. https://foodtrackingperu.com/servicios/auditoria.html
+
+- [Diseño de plantas de alimentos y agroindustriales](https://foodtrackingperu.com/servicios/diseno-plantas-alimentos-agroindustriales.html): del proceso al plano, con diagrama de flujo, equipos y áreas, layout sanitario, planos con cotas y memoria descriptiva, para plantas nuevas, ampliaciones o adecuación de locales.
+- [Diseño 3D y simulación de plantas con FlexSim](https://foodtrackingperu.com/servicios/ingenieria-3d.html): diseño 3D de plantas alimentarias HACCP-ready, simulación del proceso con FlexSim (capacidad, colas, cuellos de botella) y documentación para la validación del Plan HACCP o el certificado PGH.
+- [Implementación de HACCP, BPM e ISO 22000](https://foodtrackingperu.com/servicios/gestion-integral.html): sistemas de gestión integral con HACCP, BPM/PGH, ISO 22000, BRCGS, IFS, FSSC 22000 y SQF, con documentación lista para auditoría.
+- [Registro sanitario DIGESA, validación HACCP y PGH](https://foodtrackingperu.com/servicios/regulacion.html): registro sanitario, validación técnica oficial del Plan HACCP, certificado de Principios Generales de Higiene (PGH) y certificaciones de exportación ante DIGESA y SENASA.
+- [Digitalización de registros BPM y HACCP](https://foodtrackingperu.com/servicios/transformacion-digital.html): registros BPM y HACCP del papel a la nube, con firmas, versiones y acceso desde cualquier dispositivo.
+- [Auditoría y capacitación en BPM y HACCP](https://foodtrackingperu.com/servicios/auditoria.html): diagnóstico GAP, pre-auditorías y capacitación in-company en BPM y HACCP.
 
 ## Guías
-- Índice de guías: las cuatro guías técnicas sobre DIGESA, plan HACCP y layout de planta en un solo lugar. https://foodtrackingperu.com/guias/
-- Qué revisa DIGESA en tu planta hoy. Se obtiene la Validación Técnica Oficial del Plan HACCP o el Certificado PGH, y hay inspecciones sanitarias inopinadas. Incluye los requisitos de infraestructura del DS 007-98-SA, artículo por artículo. https://foodtrackingperu.com/guias/que-revisa-digesa-en-tu-planta.html
-- Registro sanitario DIGESA de alimentos: requisitos, costo y pasos. Qué alimentos lo necesitan, qué contiene el expediente, cómo se tramita en la VUCE, plazo de 7 días hábiles según DIGESA, vigencia de 5 años y reinscripción, con artículos del DS 007-98-SA. https://foodtrackingperu.com/guias/registro-sanitario-digesa-alimentos.html
-- Plan HACCP y validación técnica oficial DIGESA: qué es y cómo se obtiene. Los 7 principios y 12 pasos, los 14 puntos que contiene el plan, el trámite de validación ante DIGESA con artículos de la RM 449-2006/MINSA, y qué cambió en costo y vigencia. https://foodtrackingperu.com/guias/plan-haccp-validacion-tecnica-oficial-digesa.html
-- Layout y distribución de planta de alimentos: levantamiento de medidas, prueba de tu propuesta en el local real, revisión de flujos y plano con cotas antes de construir. https://foodtrackingperu.com/guias/layout-distribucion-planta-alimentos.html
 
-## Dónde trabajamos
-Lima, Callao y provincias de todo el Perú. Para proyectos fuera de Lima se coordinan visitas técnicas y reuniones virtuales.
-
-## Primer paso
-Diagnóstico inicial gratuito de 30 a 45 minutos, por videollamada o presencial en Lima. El costo de cada proyecto se define después de ese diagnóstico.
-
-## Marco normativo que aplicamos
-DL 1062 (Ley de Inocuidad de los Alimentos), DS 007-98-SA, RM 495-2008 (BPM) y NTS 071 MINSA/DIGESA, además de los estándares GFSI para empresas exportadoras.
+- [Índice de guías](https://foodtrackingperu.com/guias/): las cuatro guías técnicas sobre DIGESA, plan HACCP y layout de planta en un solo lugar.
+- [Qué revisa DIGESA en tu planta hoy](https://foodtrackingperu.com/guias/que-revisa-digesa-en-tu-planta.html): se obtiene la Validación Técnica Oficial del Plan HACCP o el Certificado PGH, y hay inspecciones sanitarias inopinadas. Incluye los requisitos de infraestructura del DS 007-98-SA, artículo por artículo.
+- [Registro sanitario DIGESA (RSA) de alimentos: requisitos, costo y pasos](https://foodtrackingperu.com/guias/registro-sanitario-digesa-alimentos.html): qué alimentos lo necesitan, qué contiene el expediente, cómo se tramita en la VUCE, plazo de 7 días hábiles según DIGESA, vigencia de 5 años y reinscripción, con artículos del DS 007-98-SA.
+- [Plan HACCP DIGESA: validación técnica oficial](https://foodtrackingperu.com/guias/plan-haccp-validacion-tecnica-oficial-digesa.html): qué es y cómo se obtiene. Los 7 principios y 12 pasos, los 14 puntos que contiene el plan, el trámite de validación ante DIGESA con artículos de la RM 449-2006/MINSA, y qué cambió en costo y vigencia.
+- [Layout y distribución de planta de alimentos](https://foodtrackingperu.com/guias/layout-distribucion-planta-alimentos.html): levantamiento de medidas, prueba de tu propuesta en el local real, revisión de flujos y plano con cotas antes de construir.
 
 ## Contacto
-- WhatsApp: +51 952 255 734
-- Correo: wparih@gmail.com
-- Facebook: https://www.facebook.com/foodtrackingperu
-- Instagram: https://www.instagram.com/foodtrackingperu/
-- LinkedIn: https://www.linkedin.com/company/foodtrackingperu/
-- Sitio web: https://foodtrackingperu.com/
+
+- [WhatsApp +51 952 255 734](https://wa.me/51952255734)
+- [Correo wparih@gmail.com](mailto:wparih@gmail.com)
+- [Perfil de Empresa en Google Maps](https://www.google.com/maps?cid=13928380357219297723)
+- [Facebook](https://www.facebook.com/foodtrackingperu)
+- [Instagram](https://www.instagram.com/foodtrackingperu/)
+- [LinkedIn](https://www.linkedin.com/company/foodtrackingperu/)
+
+## Optional
+
+- [Inicio](https://foodtrackingperu.com/): portada con los servicios, proyectos, método y preguntas frecuentes.
+- [Política de privacidad](https://foodtrackingperu.com/privacidad.html)
+- [Aviso legal y términos](https://foodtrackingperu.com/terminos.html)

@@ -50,7 +50,7 @@ header{position:fixed;top:14px;left:0;right:0;z-index:100;pointer-events:none}
 
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;isolation:isolate}
-.hero .bg{position:absolute;inset:-6%;z-index:-3;background:url(../img/hero-linea.jpg) center/cover;animation:kb 26s ease-in-out infinite alternate}
+.hero .bg{position:absolute;inset:-6%;z-index:-3;background:url(../img/hero-linea.webp) center/cover;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,rgba(0,11,33,.94) 0%,rgba(0,11,33,.8) 38%,rgba(0,11,33,.35) 100%),linear-gradient(0deg,rgba(0,11,33,.95),transparent 45%)}
 .hero .grid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(135,206,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(135,206,255,.07) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 20% 40%,#000,transparent 70%)}
@@ -160,7 +160,7 @@ section{padding:120px 0;position:relative}
 
 /* contacto */
 .contact{color:#fff;overflow:hidden;isolation:isolate;padding:130px 0}
-.contact .bg{position:absolute;inset:0;z-index:-2;background:url(../img/gestion.jpg) center/cover}
+.contact .bg{position:absolute;inset:0;z-index:-2;background:url(../img/gestion.webp) center/cover}
 .contact::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(0,11,33,.96),rgba(13,34,64,.88))}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .contact h2{color:#fff}.contact h2 .serif{color:var(--amber)}
